@@ -1,0 +1,245 @@
+\documentclass[12pt]{beamer}
+\usetheme{Antibes}
+\usecolortheme{dolphin}
+
+\usepackage{ragged2e}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\setbeamertemplate{caption}[numbered]
+\usepackage{hyperref}
+\setbeamercovered{transparent} %transparente
+%\setbeamertemplate{navigation symbols}{\includegraphics[width=0.2\linewidth]{Logo IFAM-CALMAT.png}}
+\setbeamertemplate{navigation symbols}{}
+\usepackage{tcolorbox}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\newcommand{\euler}{e}
+
+\addtobeamertemplate{block begin}{}{\justifying}
+\addtobeamertemplate{block alerted begin}{}{\justifying}
+\addtobeamertemplate{block example begin}{}{\justifying}
+\let\raggedright\justifying         
+\AtBeginEnvironment{frame}{\justifying} 
+
+
+\author[Joao Victor \& Prof. Dr. Tacildo Araujo]{% 
+	Joao Victor\inst{1} \and Prof. Dr. Tacildo Araújo\inst{2}}
+\title{Algoritmos Genéticos para Minimização de Funções: Uma Abordagem Introdutória com Apoio do Excel}
+\institute[]{% 
+	\textsuperscript{1} Graduando em Matemática 	
+	\textsuperscript{2} Orientador
+}
+\date{\today} 
+\titlegraphic{\includegraphics[width=0.32\textwidth]{imagens/logo_5.png}}
+
+\begin{document}
+	\onehalfspacing 
+	
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}{Sumário}
+		\tableofcontents
+	\end{frame}
+	
+	\section{Introdução aos Algoritmos Genéticos}
+	
+	\begin{frame}{Fundamentos dos Algoritmos Genéticos}
+		Conforme Lacerda, Carvalho e Ludermir (2002):
+		\begin{itemize}
+			\justifying
+			\item Algoritmos Genéticos (AGs) são métodos de otimização e busca inspirados nos mecanismos de evolução de populações de seres vivos.
+			\justifying
+			\uncover<2->{\item Esses algoritmos foram introduzidos por John Holland e posteriormente popularizados por David Goldberg, consolidando-se como uma abordagem eficiente para resolver problemas complexos de otimização.}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Contextualização}
+		
+		\begin{block}{Lacerda, Carvalho e Ludermir (2002)}
+			\justifying 
+			Otimização é a busca da melhor solução para um dado problema. Consiste em
+			tentar várias soluções e utilizar a informação obtida neste processo de forma a encontrar soluções cada vez melhores.
+		\end{block}
+		
+		$$\includegraphics[scale=0.07]{imagens/tv.png}$$
+	\end{frame}
+	
+	\begin{frame}{Função Logarítmica}
+		\begin{block}{Definição}
+			Dado um número real $a \ (0<a\neq1)$, chamamos de \textbf{função logarítmica} de base $\textbf{a}$ a função $f$ de $\mathbb{R_+^*} \ \text{em} \ \mathbb{R}$ que associa a cada $x$ o número $\log_{a}x$.
+		\end{block} Exemplos de funções logarítmicas em $\mathbb{R_+^*}$
+		
+		\begin{itemize}
+			\item [a)] $f(x)=\log_{2}x$
+			\item [b)] $g(x)=\log_{\frac{1}{2}}x$
+			\item [c)] $h(x)=\log x$
+			\item [d)] $p(x)=\ln x$
+		\end{itemize}
+	\end{frame}
+	
+	\section{Propriedades}
+	
+	\begin{frame}{Propriedades (P)}
+		\begin{block}{P.1}
+			Se $0<a\neq 1$, então as funções $f$ de $\mathbb{R_{+}^*} \ \text{em} \ \mathbb{R}$,
+			definida por $f(x)=\log_{a}x$, e $g$ de $\mathbb{R} \ \text{em} \ \mathbb{R_{+}^*}$, definida
+			por $g(x)=a^{x}$, são inversas uma da outra. 
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}{Propriedades (P)}
+		
+		\begin{block}{P.2}
+			A função logarítmica $f(x)=log_{a}x$ é crescente (decrescente) se, e somente se,
+			$a>1\  (0<a< 1)$            
+		\end{block}
+	\end{frame}
+	
+	\section{Observações}
+	
+	\begin{frame}{Observações (O)}
+		\begin{block}{O.1}
+			Quando a base é maior que 1, a relação de desigualdade existente entre os logaritmos
+			de dois números positivos tem o mesmo sentido que a relação entres esses números.
+		\end{block} Exemplos:
+		
+		\begin{itemize}
+			\item [a)] $4>2 \Rightarrow \log_{2}4 > \log_{2}2$
+			\item [b)] $15 >4 \Rightarrow \log_{3}15 > \log_{3}4$
+			\item [c)] $0,42 < 6,3 \Rightarrow \log_{7}0,42 < \log_{7}6,3$
+			\item [d)] $4 > 0,3 \Rightarrow \ln 4 > \ln 0,3$
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Observações (O)}
+		\begin{block}{O.2}
+			Quando a base é positiva e menor que 1, a relação de desigualdade existente entre os logaritmos
+			de dois números positivos é de sentido contrário à que existe entre esses números.
+		\end{block} Exemplos:
+		
+		\begin{itemize}
+			\item [a)] $8>2 \Rightarrow \log_{\frac{1}{2}}8 < \log_{\frac{1}{2}}2$
+			\item [b)] $12>5 \Rightarrow \log_{\frac{1}{3}}12 < \log_{\frac{1}{3}}5$
+			\item [c)] $\sqrt{3} < 7 \Rightarrow \log_{0,1}\sqrt{3}>\log_{0,1}7$
+			\item [d)] $0,3 < 2,4 \Rightarrow \log_{0,2}0,3 > \log_{0,2}2,4$
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Observações (O)}
+		\begin{block}{O.3}
+			Se a base é maior que 1, então os números positivos menores que 1 têm logaritmos
+			negativos e os números maiores que 1 tem logaritmos postivos.
+		\end{block} Exemplos:
+		
+		\begin{itemize}
+			\item [a)] $\log_{2}0,25 < 0$
+			\item [b)] $\log 0,02 < 0$
+			\item [c)] $\log_{2}32 > 0$
+			\item [d)] $\log_{3} \sqrt{5} > 0$
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Observações (O)}
+		\begin{block}{O.4}
+			Se a base é positiva e menor que 1, então os números positivos menores que 1 têm
+			logaritmos positivos e os númeors maiores que 1 têm logaritmos negativos.
+		\end{block} Exemplos:
+		
+		\begin{itemize}
+			\item [a)] $\log_{0,5}0,25 > 0$
+			\item [b)] $\log_{0,1}0,03 > 0$
+			\item [c)] $\log_{0,5}4 < 0$
+			\item [d)] $\log_{0,2}\sqrt{3} < 0$
+		\end{itemize}
+	\end{frame}
+	
+	\section{Imagem}
+	
+	\begin{frame}{Imagem}
+		\justifying
+		Se $0<a\neq 1$ então a função $f$ de $\mathbb{R_{+}^*} \ \text{em} \ \mathbb{R}$ definida
+		por $f(x)=\log_{a}x$ admite a função inversa de $g$ de $\mathbb{R} \ \text{em} \ \mathbb{R_{+}^*}$ definida
+		por $g(x)=a^{x}$. Logo, $f$ é bijetora e, portanto, a imagem de $f$ é: $$\text{Im} = \mathbb{R}$$
+	\end{frame}
+	
+	\section{Gráfico}
+	
+	\begin{frame}{Gráfico}
+		\begin{block}{Definição}
+			Com relação ao gráfico cartesiano da função $f(x)=\log_{a}x \ (0<a\neq 1)$, podemos dizer:
+			
+			\begin{enumerate}
+				\item [1º)] está todo à direita do eixo y (x>0);
+				\item [2º)] corta o eixo x no ponto de abcissa 1 ($\log_{a}1=0$ para todo $0<a\neq 1$);
+				\item [3º)] se $a>1$ é de uma função crescente e se $0<a<1$ é de uma função descrescente;
+				\item [4º)] é simétrico em relação à reta $y=x$ (bissetriz dos quadrantes ímpares) do gráfico
+				da função $g(x)=a^x$;
+				\item [5º)] toma um dos aspectos da figura a seguir:
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+	
+	
+	\section{Exercícios}
+	
+	
+	\begin{frame}{Exercício}
+		Determine o domínio da função $f(x)=\log_{3}\left(x^{2}-4 \right)$
+	\end{frame}
+	
+	\begin{frame}{Exercício}
+		\justifying
+		(Unicamp) A altura (em metros) de um arbusto em uma dada fase de seu desenvolvimento
+		pode ser expressa pela função $h(t)=0,5+\log_{3}\left( t+1 \right)$, onde o tempo
+		$t \ge 0$ é dado em anos. Qual é o tempo necessário para que a altura aumente de 0,5 m para 1,5 m?
+	\end{frame}
+	
+	\begin{frame}{Exercício}
+		\justifying
+		A função abaixo representa uma estimativa sobre o número de funcionários de uma empresa,
+		em função do tempo de vida: $$n(t)=400+50.\log_{4}(t+2)$$ Em que \textbf{n(t)} é o número de funcionários e $t$ representa a quantidade
+		de anos de existência da empresa.
+		
+		\begin{itemize}
+			\item [a)] Quantos funcionários a empresa possuía na sua fundação?
+			\item [b)] Quantos funcionários foram incorporados à empresa do 2º 
+			ao 6º ano? 
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Exercício}
+		\justifying
+		(Unesp-SP) Uma instituição bancária oferece um rendimento de 15\% ao ano para depósitos feitos numa certa modalidade
+		de aplicação financeira. Um cliente deste banco deposita 1.000 reais nessa aplicação. Ao final de n anos, o capital que esse cliente
+		terá em reais, relativo a esse depósito, é:
+		
+		\begin{itemize}
+			\item [a)] $1000 + 0,15n$
+			\item [b)] $1000.0,15n$
+			\item [c)] $1000.0,15^n$
+			\item [d)] $1000 + 1,15^n$
+			\item [e)] $1000.1,15^n$ %
+		\end{itemize}
+	\end{frame}
+	
+	
+	
+	\begin{frame}{Exercício}
+		
+		\justifying
+		Quando um elemento radioativo, como o Césio 137, entra em contato com o meio ambiente, pode afetar o solo, os rios, as plantas e as pessoas. A radiação não torna o solo infértil, porém  tudo que nele crescer estará contaminado. A expressão $Q(t)=Q_{0}.\euler^{\left( -0,023t \right)}$ representa a quantidade, em gramas, de átomos radioativos de Césio 137 presentes no instante t, em dias, onde $Q_{0}$ é a quantidade inicial. O tempo, em dias, para que a quantidade de Césio 137 seja a metade da quantidade inicial é igual a: $\left( \text{Use} \ \ln 2=0,69 \right)$ %30
+		
+	\end{frame}
+	
+	
+	
+\end{document}
