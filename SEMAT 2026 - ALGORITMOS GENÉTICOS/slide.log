@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.30)  3 MAY 2026 22:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.30)  3 MAY 2026 23:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1212,7 +1212,7 @@ c/cm-super/sfss0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.
 pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texm
 f/fonts/type1/public/cm-super/sfss1728.pfb></usr/share/texmf/fonts/type1/public
 /cm-super/sfsx1200.pfb>
-Output written on slide.pdf (27 pages, 521685 bytes).
+Output written on slide.pdf (27 pages, 521700 bytes).
 PDF statistics:
  491 PDF objects out of 1000 (max. 8388607)
  309 compressed objects within 4 object streams
