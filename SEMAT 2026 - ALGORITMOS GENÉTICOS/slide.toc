@@ -1,7 +1,5 @@
 \babel@toc {brazil}{}\relax 
-\beamer@sectionintoc {1}{Introdução aos Algoritmos Genéticos}{3}{0}{1}
-\beamer@sectionintoc {2}{Propriedades}{7}{0}{2}
-\beamer@sectionintoc {3}{Observações}{9}{0}{3}
-\beamer@sectionintoc {4}{Imagem}{13}{0}{4}
-\beamer@sectionintoc {5}{Gráfico}{14}{0}{5}
-\beamer@sectionintoc {6}{Exercícios}{15}{0}{6}
+\beamer@sectionintoc {1}{Contextualização}{3}{0}{1}
+\beamer@sectionintoc {2}{Introdução}{6}{0}{2}
+\beamer@sectionintoc {3}{Terminologia de um AG}{14}{0}{3}
+\beamer@sectionintoc {4}{Conversão binário-decimal}{27}{0}{4}

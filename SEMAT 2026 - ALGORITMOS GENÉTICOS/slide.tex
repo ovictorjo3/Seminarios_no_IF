@@ -1,6 +1,6 @@
 \documentclass[12pt]{beamer}
-\usetheme{Antibes}
-\usecolortheme{dolphin}
+\usetheme{JuanLesPins}
+\usecolortheme{spruce}
 
 \usepackage{ragged2e}
 \usepackage[utf8]{inputenc}
@@ -29,15 +29,29 @@
 \AtBeginEnvironment{frame}{\justifying} 
 
 
-\author[Joao Victor \& Prof. Dr. Tacildo Araujo]{% 
-	Joao Victor\inst{1} \and Prof. Dr. Tacildo Araújo\inst{2}}
+\author[Prof. Dr. Tacildo Araujo \& Joao Victor]{% 
+	Prof. Dr. Tacildo Araújo\inst{1} \and Joao Victor\inst{2}}
 \title{Algoritmos Genéticos para Minimização de Funções: Uma Abordagem Introdutória com Apoio do Excel}
 \institute[]{% 
-	\textsuperscript{1} Graduando em Matemática 	
-	\textsuperscript{2} Orientador
+	\textsuperscript{1} Orientador	
+	\textsuperscript{2} Graduando em Matemática
 }
 \date{\today} 
-\titlegraphic{\includegraphics[width=0.32\textwidth]{imagens/logo_5.png}}
+\titlegraphic{\includegraphics[width=0.33\textwidth]{imagens/logo.png}}
+% \titlegraphic{
+	% 	\begin{columns}[c]
+		% 		\begin{column}{0.8\textwidth}
+			% 			\centering
+			% 			\includegraphics[width=0.45\textwidth]{imagens/logo.png}  % Primeira logo
+			% 		\end{column}
+		% 		\begin{column}{0.45\textwidth}
+			% 			\centering
+			% 			\includegraphics[width=0.45\textwidth]{imagens/semat.png}  % Segunda logo
+			% 		\end{column}
+		% 	\end{columns}
+	% }
+
+
 
 \begin{document}
 	\onehalfspacing 
@@ -50,196 +64,170 @@
 		\tableofcontents
 	\end{frame}
 	
-	\section{Introdução aos Algoritmos Genéticos}
+	\section{Contextualização}
 	
-	\begin{frame}{Fundamentos dos Algoritmos Genéticos}
-		Conforme Lacerda, Carvalho e Ludermir (2002):
-		\begin{itemize}
+		\begin{frame}{O Problema da mochila (\textit{Knapsack problem})}
 			\justifying
-			\item Algoritmos Genéticos (AGs) são métodos de otimização e busca inspirados nos mecanismos de evolução de populações de seres vivos.
+			Imagine que você está planejando uma viagem de acampamento e tem espaço limitado na mochila. Você quer maximizar o valor dos itens que leva, respeitando o limite de peso da mochila. Você tem uma lista de itens, cada um com um peso e um valor, e quer escolher os de maior valor. 
+		
+			\begin{center}
+				\includegraphics[scale=0.35]{imagens/problema_mochila.png}
+			\end{center} 
+		
+		\end{frame}
+	
+		\begin{frame}{O Problema da mochila (\textit{Knapsack problem})}
 			\justifying
-			\uncover<2->{\item Esses algoritmos foram introduzidos por John Holland e posteriormente popularizados por David Goldberg, consolidando-se como uma abordagem eficiente para resolver problemas complexos de otimização.}
-		\end{itemize}
-	\end{frame}
-	
-	\begin{frame}{Contextualização}
+			Segue uma lista de itens de exemplo:
+			\begin{center}
+				\includegraphics[scale=0.28]{imagens/itens.png}
+			\end{center} O objetivo é selecionar os itens que maximizem o valor, garantindo que o peso total dos itens na mochila não exceda a capacidade máxima de 10 kg.
 		
-		\begin{block}{Lacerda, Carvalho e Ludermir (2002)}
-			\justifying 
-			Otimização é a busca da melhor solução para um dado problema. Consiste em
-			tentar várias soluções e utilizar a informação obtida neste processo de forma a encontrar soluções cada vez melhores.
-		\end{block}
+		\end{frame}
+	
+		\begin{frame}{Problemas de otimização continuo}
+			\justifying
+			Imagine que você precisa ajustar um parâmetro x para minimizar o custo de um sistema, que varia conforme a função $f(x)=x(\sin(10\pi x))+1$. O gráfico abaixo mostra como essa função possui vários vales (mínimos locais) e um vale mais profundo (mínimo global).
 		
-		$$\includegraphics[scale=0.07]{imagens/tv.png}$$
-	\end{frame}
-	
-	\begin{frame}{Função Logarítmica}
-		\begin{block}{Definição}
-			Dado um número real $a \ (0<a\neq1)$, chamamos de \textbf{função logarítmica} de base $\textbf{a}$ a função $f$ de $\mathbb{R_+^*} \ \text{em} \ \mathbb{R}$ que associa a cada $x$ o número $\log_{a}x$.
-		\end{block} Exemplos de funções logarítmicas em $\mathbb{R_+^*}$
+			$$\includegraphics[scale=0.29]{imagens/grafico_funcao.png}$$
 		
-		\begin{itemize}
-			\item [a)] $f(x)=\log_{2}x$
-			\item [b)] $g(x)=\log_{\frac{1}{2}}x$
-			\item [c)] $h(x)=\log x$
-			\item [d)] $p(x)=\ln x$
-		\end{itemize}
-	\end{frame}
-	
-	\section{Propriedades}
-	
-	\begin{frame}{Propriedades (P)}
-		\begin{block}{P.1}
-			Se $0<a\neq 1$, então as funções $f$ de $\mathbb{R_{+}^*} \ \text{em} \ \mathbb{R}$,
-			definida por $f(x)=\log_{a}x$, e $g$ de $\mathbb{R} \ \text{em} \ \mathbb{R_{+}^*}$, definida
-			por $g(x)=a^{x}$, são inversas uma da outra. 
-		\end{block}
-	\end{frame}
-	
-	\begin{frame}{Propriedades (P)}
 		
-		\begin{block}{P.2}
-			A função logarítmica $f(x)=log_{a}x$ é crescente (decrescente) se, e somente se,
-			$a>1\  (0<a< 1)$            
-		\end{block}
-	\end{frame}
+		\end{frame}
 	
-	\section{Observações}
+	\section{Introdução}
 	
-	\begin{frame}{Observações (O)}
-		\begin{block}{O.1}
-			Quando a base é maior que 1, a relação de desigualdade existente entre os logaritmos
-			de dois números positivos tem o mesmo sentido que a relação entres esses números.
-		\end{block} Exemplos:
+		\begin{frame}{Introdução}
+			\justifying
 		
-		\begin{itemize}
-			\item [a)] $4>2 \Rightarrow \log_{2}4 > \log_{2}2$
-			\item [b)] $15 >4 \Rightarrow \log_{3}15 > \log_{3}4$
-			\item [c)] $0,42 < 6,3 \Rightarrow \log_{7}0,42 < \log_{7}6,3$
-			\item [d)] $4 > 0,3 \Rightarrow \ln 4 > \ln 0,3$
-		\end{itemize}
-	\end{frame}
+			O Problema da Mochila e a minimização da função $f(x)=x(\sin(10\pi x))+1$ são problemas de otimização resolvidos com Algoritmos Genéticos (AG). O primeiro busca maximizar o valor de itens com peso limitado. O segundo encontra o mínimo global de uma função com múltiplos mínimos locais. Em ambos, o AG encontra soluções próximas da ótima de forma eficiente, sem exigir derivadas ou buscas exaustivas.
+		\end{frame}
 	
-	\begin{frame}{Observações (O)}
-		\begin{block}{O.2}
-			Quando a base é positiva e menor que 1, a relação de desigualdade existente entre os logaritmos
-			de dois números positivos é de sentido contrário à que existe entre esses números.
-		\end{block} Exemplos:
-		
-		\begin{itemize}
-			\item [a)] $8>2 \Rightarrow \log_{\frac{1}{2}}8 < \log_{\frac{1}{2}}2$
-			\item [b)] $12>5 \Rightarrow \log_{\frac{1}{3}}12 < \log_{\frac{1}{3}}5$
-			\item [c)] $\sqrt{3} < 7 \Rightarrow \log_{0,1}\sqrt{3}>\log_{0,1}7$
-			\item [d)] $0,3 < 2,4 \Rightarrow \log_{0,2}0,3 > \log_{0,2}2,4$
-		\end{itemize}
-	\end{frame}
 	
-	\begin{frame}{Observações (O)}
-		\begin{block}{O.3}
-			Se a base é maior que 1, então os números positivos menores que 1 têm logaritmos
-			negativos e os números maiores que 1 tem logaritmos postivos.
-		\end{block} Exemplos:
-		
-		\begin{itemize}
-			\item [a)] $\log_{2}0,25 < 0$
-			\item [b)] $\log 0,02 < 0$
-			\item [c)] $\log_{2}32 > 0$
-			\item [d)] $\log_{3} \sqrt{5} > 0$
-		\end{itemize}
-	\end{frame}
+		\begin{frame}{Definição}
+			\begin{block}{Conforme Pozo et al. (2003): }
+				\begin{itemize}
+					\item O Algoritmo Genético é uma das técnicas da computação evolucionária de busca e otimização inspirada na evolução natural das espécies de Darwin.
+				
+					\item \uncover<2->{A ideia é criar uma população de indivíduos que vão se reproduzir e competir pela sobrevivência, onde os melhores indivíduos sobrevivem e transferem suas características para novas gerações, até que se alcance uma solução próxima ao resultado ótimo.} 
+				\end{itemize}
+			\end{block} 
+		\end{frame}
 	
-	\begin{frame}{Observações (O)}
-		\begin{block}{O.4}
-			Se a base é positiva e menor que 1, então os números positivos menores que 1 têm
-			logaritmos positivos e os númeors maiores que 1 têm logaritmos negativos.
-		\end{block} Exemplos:
-		
-		\begin{itemize}
-			\item [a)] $\log_{0,5}0,25 > 0$
-			\item [b)] $\log_{0,1}0,03 > 0$
-			\item [c)] $\log_{0,5}4 < 0$
-			\item [d)] $\log_{0,2}\sqrt{3} < 0$
-		\end{itemize}
-	\end{frame}
+		\begin{frame}{O Algortimo Genético}
+			\justifying
+			Para Vitor Emanuel Batista (2020), o desenvolvimento de simulações computacionais de sistemas genéticos teve início na década de 50 e 60 a partir de biólogos e foi John Holland quem iniciou as primeiras pesquisas sobre o tema, publicando, em 1975, o livro “Adaptation in Natural and Artificial Systems”.
+		\end{frame}
 	
-	\section{Imagem}
+		\begin{frame}{O Algortimo Genético}
+			\justifying
+			Posteriormente se iniciariam aplicações industriais dos algoritmos genéticos com David E. Goldberg, aluno de Holland, e hoje esses algoritmos são utilizados para solucionar problemas de otimização e aprendizado de máquinas, argumenta Batista (2020).
+		\end{frame}
 	
-	\begin{frame}{Imagem}
-		\justifying
-		Se $0<a\neq 1$ então a função $f$ de $\mathbb{R_{+}^*} \ \text{em} \ \mathbb{R}$ definida
-		por $f(x)=\log_{a}x$ admite a função inversa de $g$ de $\mathbb{R} \ \text{em} \ \mathbb{R_{+}^*}$ definida
-		por $g(x)=a^{x}$. Logo, $f$ é bijetora e, portanto, a imagem de $f$ é: $$\text{Im} = \mathbb{R}$$
-	\end{frame}
+		\begin{frame}{O Algortimo Genético}
+			\justifying
+			Conforme Pozo et al. (2003), a ideia básica de funcionamento dos algoritmos genéticos é a de tratar as possíveis soluções do problema como "indivíduos" de uma "população", que irá "evoluir" a cada iteração ou "geração". Para isso é necessário construir um modelo de evolução onde os indivíduos sejam soluções de um problema
+		\end{frame}
 	
-	\section{Gráfico}
-	
-	\begin{frame}{Gráfico}
-		\begin{block}{Definição}
-			Com relação ao gráfico cartesiano da função $f(x)=\log_{a}x \ (0<a\neq 1)$, podemos dizer:
+		\begin{frame}{O Algortimo Genético}
+			\begin{itemize}
+			\item Antes de detalhar o comportamento do algoritmo genético propriamente dito, se faz necessária a compreensão da terminologia adotada para representar as entidades e processos envolvidos. 
 			
-			\begin{enumerate}
-				\item [1º)] está todo à direita do eixo y (x>0);
-				\item [2º)] corta o eixo x no ponto de abcissa 1 ($\log_{a}1=0$ para todo $0<a\neq 1$);
-				\item [3º)] se $a>1$ é de uma função crescente e se $0<a<1$ é de uma função descrescente;
-				\item [4º)] é simétrico em relação à reta $y=x$ (bissetriz dos quadrantes ímpares) do gráfico
-				da função $g(x)=a^x$;
-				\item [5º)] toma um dos aspectos da figura a seguir:
-			\end{enumerate}
-		\end{block}
-	\end{frame}
+			\uncover<2->{
+			\item Os termos, análogos aos da biologia, referem-se no algoritmo à construção das possíveis soluções ao problema abordado.
+			}
+			\end{itemize}
+		\end{frame}
 	
+	\section{Terminologia de um AG}
 	
-	\section{Exercícios}
-	
-	
-	\begin{frame}{Exercício}
-		Determine o domínio da função $f(x)=\log_{3}\left(x^{2}-4 \right)$
-	\end{frame}
-	
-	\begin{frame}{Exercício}
-		\justifying
-		(Unicamp) A altura (em metros) de um arbusto em uma dada fase de seu desenvolvimento
-		pode ser expressa pela função $h(t)=0,5+\log_{3}\left( t+1 \right)$, onde o tempo
-		$t \ge 0$ é dado em anos. Qual é o tempo necessário para que a altura aumente de 0,5 m para 1,5 m?
-	\end{frame}
-	
-	\begin{frame}{Exercício}
-		\justifying
-		A função abaixo representa uma estimativa sobre o número de funcionários de uma empresa,
-		em função do tempo de vida: $$n(t)=400+50.\log_{4}(t+2)$$ Em que \textbf{n(t)} é o número de funcionários e $t$ representa a quantidade
-		de anos de existência da empresa.
+		\begin{frame}{Terminologia de um AG}
+			Vamos detalhar os seguintes termos da imagem:
 		
-		\begin{itemize}
-			\item [a)] Quantos funcionários a empresa possuía na sua fundação?
-			\item [b)] Quantos funcionários foram incorporados à empresa do 2º 
-			ao 6º ano? 
-		\end{itemize}
-	\end{frame}
-	
-	\begin{frame}{Exercício}
-		\justifying
-		(Unesp-SP) Uma instituição bancária oferece um rendimento de 15\% ao ano para depósitos feitos numa certa modalidade
-		de aplicação financeira. Um cliente deste banco deposita 1.000 reais nessa aplicação. Ao final de n anos, o capital que esse cliente
-		terá em reais, relativo a esse depósito, é:
+			$$\includegraphics[scale=0.35]{imagens/terminologia.png}$$
+		\end{frame}
 		
-		\begin{itemize}
-			\item [a)] $1000 + 0,15n$
-			\item [b)] $1000.0,15n$
-			\item [c)] $1000.0,15^n$
-			\item [d)] $1000 + 1,15^n$
-			\item [e)] $1000.1,15^n$ %
-		\end{itemize}
-	\end{frame}
-	
-	
-	
-	\begin{frame}{Exercício}
+		\begin{frame}{Cromossomo}
+			\begin{block}{Conforme Koza (1992) e Batista (2020):}
+				\begin{itemize}
+					\justifying
+					\item Cada cromossomo representa uma solução do problema, tomado também como sinônimo de indivíduo, representado por uma cadeia de símbolos (genes).
+					
+					\uncover<2->{
+					\item Uma das principais formas de representar um cromossomo é através de uma sequência de bits, onde cada bit ativo (1) representa a presença de uma característica e cada bit inativo (0) representa a ausência dessa característica 
+					}
+				\end{itemize}
+			\end{block}
+		\end{frame}
 		
-		\justifying
-		Quando um elemento radioativo, como o Césio 137, entra em contato com o meio ambiente, pode afetar o solo, os rios, as plantas e as pessoas. A radiação não torna o solo infértil, porém  tudo que nele crescer estará contaminado. A expressão $Q(t)=Q_{0}.\euler^{\left( -0,023t \right)}$ representa a quantidade, em gramas, de átomos radioativos de Césio 137 presentes no instante t, em dias, onde $Q_{0}$ é a quantidade inicial. O tempo, em dias, para que a quantidade de Césio 137 seja a metade da quantidade inicial é igual a: $\left( \text{Use} \ \ln 2=0,69 \right)$ %30
+		\begin{frame}{Cromossomo}
+			\justifying
+			
+			Comparando com a genética dos seres vivos, cada bit da cadeia representaria um gene, menor unidade de informação em um cromossomo, e a cadeia de bits representa o \textbf{cromossomo}, que é a resultante do problema.
+		\end{frame}
 		
-	\end{frame}
+		\begin{frame}{População}
+			\begin{block}{Segundo Patricia Vargas (2000:)}
+				\justifying
+				\begin{itemize}
+					\item É o conjunto de cromossomos (ou indivíduos) gerados que são disponibilizados como possíveis soluções para o problema apontado e que serão utilizados para a produção de novos indivíduos;
+					
+					\uncover<2->{
+					\item O tamanho da população inicial e das subsequentes gerações são um aspecto importante a ser considerado para o sucesso do processo evolutivo, pois é possível comprometer a evolução dos indivíduos caso a quantidade escolhida seja muito pequena ou muito grande.
+					}
+				\end{itemize}
+			\end{block}
+		\end{frame}
+		
+		\begin{frame}{Cruzamento (ou \textit{crossover})}
+			\begin{block}{Fabrício Bueno (2009) argumenta:}
+				\begin{itemize}
+					\item É um processo de reprodução sexuada em que há combinação de genes dos cromossomos originando um ou mais descendentes;
+					
+					\uncover<2->{
+					\item O cruzamento é o principal responsável pela variabilidade genética.
+					}
+				\end{itemize}
+			\end{block}
+		\end{frame}
+		
+		\begin{frame}{Cruzamento (ou \textit{crossover})}
+			\justifying
+			Exemplo de reprodução sexuada em que há combinação de genes dos cromossomos originando um ou mais descendentes. 
+			
+			$$\includegraphics[scale=0.3]{imagens/crossover.png}$$
+			
+		\end{frame}
+		
+		\begin{frame}{Outras terminologias}
+			\begin{block}{Fabrício Bueno (2009) apresenta:}
+				\justifying
+				\begin{itemize}
+				
+					\item \textbf{Mutação}: anomalias que causam a alteração aleatória de genes, seja na sua localização, seja no seu conteúdo;
+					
+					\uncover<2->{
+					\item \textbf{Geração}: iteração do algoritmo genético;
+					}
+					
+					\uncover<3->{
+					\item \textbf{Aptidão (ou fitness)}: indicador qualitativo de um indivíduo. O grau de aptidãode um indivíduo é obtido a partir de uma função objetivo;
+					}
+					
+					\uncover<4->{
+					\item \textbf{Função objetivo}: função matemática que avalia as soluções (indivíduos) emrelação ao problema.
+					}
+				\end{itemize}
+			\end{block}
+		\end{frame}
+		
+	\section{Conversão binário-decimal}
 	
-	
-	
+		\begin{frame}{Conversão binário-decimal}
+			\justifying
+			Você já sabe o que é um cromossomo, população e fitness. Mas como um AG resolve o problema da função $f(x)=x(\sin(10\pi x))+1$ se ele trabalha com bits? A resposta está na conversão binário-decimal.
+		\end{frame}
+		
 \end{document}
+
+
+
