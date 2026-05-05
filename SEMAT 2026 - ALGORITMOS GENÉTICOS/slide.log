@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.30)  4 MAY 2026 12:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.30)  5 MAY 2026 01:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -690,12 +690,11 @@ Package: amsthm 2020/05/29 v2.20.6
 \beamer@dimb=\dimen301
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty)))
-(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerthemeJuanLesPins.sty
-(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemesmoothtree.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty)
-(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty))
-(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemespruce.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty))
 (/usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 \CenteringLeftskip=\skip67
@@ -913,14 +912,14 @@ LaTeX Font Info:    ... okay on input line 56.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(28.45274pt, 307.28987pt, 28.45274pt)
+* h-part:(L,W,R)=(11.74988pt, 340.6956pt, 11.74988pt)
 * v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
 * \paperwidth=364.19536pt
 * \paperheight=273.14662pt
-* \textwidth=307.28987pt
+* \textwidth=340.6956pt
 * \textheight=244.6939pt
-* \oddsidemargin=-43.81725pt
-* \evensidemargin=-43.81725pt
+* \oddsidemargin=-60.52011pt
+* \evensidemargin=-60.52011pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
@@ -1049,8 +1048,16 @@ Dictionary: translator-numbers-dictionary, Language: English
 ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 ) (./slide.nav)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 56--56
+ [][][][]  
+ []
 
+
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 61--61
+ [][][][]  
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1068,138 +1075,411 @@ ut line 61.
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-<imagens/logo.png, id=53, 1135.24126pt x 411.5375pt>
+<imagens/logo.png, id=43, 1135.24126pt x 411.5375pt>
 File: imagens/logo.png Graphic file (type png)
 <use imagens/logo.png>
 Package pdftex.def Info: imagens/logo.png  used on input line 61.
-(pdftex.def)             Requested size: 101.40622pt x 36.76047pt.
+(pdftex.def)             Requested size: 102.20972pt x 37.04933pt.
+<imagens/semat.png, id=44, 308.15125pt x 264.99pt>
+File: imagens/semat.png Graphic file (type png)
+<use imagens/semat.png>
+Package pdftex.def Info: imagens/semat.png  used on input line 61.
+(pdftex.def)             Requested size: 53.66011pt x 46.14346pt.
 
-Overfull \vbox (6.59145pt too high) detected at line 61
+Overfull \vbox (0.1475pt too high) detected at line 61
  []
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/en
-c/dvips/cm-super/cm-super-t1.enc}
 
- <./imagens/logo.png>] (./slide.toc) [2
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
+dvips/cm-super/cm-super-t1.enc} <./imagens/logo.png> <./imagens/semat.png>]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 65--65
+ [][][][]  
+ []
+
+(./slide.toc)
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[2
 
 ]
-<imagens/problema_mochila.png, id=85, 308.15125pt x 308.15125pt>
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 77--77
+ [][][][]  
+ []
+
+<imagens/problema_mochila.png, id=77, 308.15125pt x 308.15125pt>
 File: imagens/problema_mochila.png Graphic file (type png)
 <use imagens/problema_mochila.png>
 Package pdftex.def Info: imagens/problema_mochila.png  used on input line 77.
 (pdftex.def)             Requested size: 107.85454pt x 107.85454pt.
 
-Overfull \vbox (5.26361pt too high) detected at line 77
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
  []
 
 [3
 
  <./imagens/problema_mochila.png>]
-<imagens/itens.png, id=95, 1071.00125pt x 291.0875pt>
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 86--86
+ [][][][]  
+ []
+
+<imagens/itens.png, id=85, 1071.00125pt x 291.0875pt>
 File: imagens/itens.png Graphic file (type png)
 <use imagens/itens.png>
 Package pdftex.def Info: imagens/itens.png  used on input line 86.
 (pdftex.def)             Requested size: 299.87831pt x 81.50394pt.
- [4
+
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[4
 
  <./imagens/itens.png>]
-<imagens/grafico_funcao.png, id=107, 668.4975pt x 352.31625pt>
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 95--95
+ [][][][]  
+ []
+
+
+Overfull \hbox (8.06847pt too wide) in paragraph at lines 95--95
+\T1/cmss/m/n/12 custo de um sis-tema, que va-ria con-forme a fun-ção $\OT1/math
+kerncmss/m/sl/12 f\OT1/cmss/m/n/12 (\OT1/mathkerncmss/m/sl/12 x\OT1/cmss/m/n/12
+ ) = \OT1/mathkerncmss/m/sl/12 x\OT1/cmss/m/n/12 ([](\T1/cmss/m/n/12 10\OML/cmm
+/m/it/12 ^^Y\OT1/mathkerncmss/m/sl/12 x\OT1/cmss/m/n/12 )) +
+ []
+
+<imagens/grafico_funcao.png, id=94, 668.4975pt x 352.31625pt>
 File: imagens/grafico_funcao.png Graphic file (type png)
 <use imagens/grafico_funcao.png>
 Package pdftex.def Info: imagens/grafico_funcao.png  used on input line 95.
 (pdftex.def)             Requested size: 193.8593pt x 102.16908pt.
 
-Overfull \vbox (15.49539pt too high) detected at line 95
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
  []
 
 [5
 
- <./imagens/grafico_funcao.png>] [6
+ <./imagens/grafico_funcao.png>]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 103--103
+ [][][][]  
+ []
 
-] [7
 
-] [8
+Overfull \hbox (13.45189pt too wide) in paragraph at lines 103--103
+[]\T1/cmss/m/n/12 O Pro-blema da Mo-chila e a mi-ni-mi-za-ção da fun-ção $\OT1/
+mathkerncmss/m/sl/12 f\OT1/cmss/m/n/12 (\OT1/mathkerncmss/m/sl/12 x\OT1/cmss/m/
+n/12 ) = \OT1/mathkerncmss/m/sl/12 x\OT1/cmss/m/n/12 ([](\T1/cmss/m/n/12 10\OML
+/cmm/m/it/12 ^^Y\OT1/mathkerncmss/m/sl/12 x\OT1/cmss/m/n/12 )) +
+ []
 
-] [9
 
-] [10
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
-] [11
-
-] [12
-
-] [13
+[6
 
 ]
-<imagens/terminologia.png, id=218, 722.7pt x 404.51125pt>
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 114--114
+ [][][][]  
+ []
+
+
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[7
+
+]
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[8
+
+]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 119--119
+ [][][][]  
+ []
+
+
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[9
+
+]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 124--124
+ [][][][]  
+ []
+
+
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[10
+
+]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 129--129
+ [][][][]  
+ []
+
+
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[11
+
+]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 139--139
+ [][][][]  
+ []
+
+
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[12
+
+]
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[13
+
+]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 147--147
+ [][][][]  
+ []
+
+<imagens/terminologia.png, id=192, 722.7pt x 404.51125pt>
 File: imagens/terminologia.png Graphic file (type png)
 <use imagens/terminologia.png>
 Package pdftex.def Info: imagens/terminologia.png  used on input line 147.
 (pdftex.def)             Requested size: 252.94878pt x 141.58105pt.
- [14
 
- <./imagens/terminologia.png>] [15
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
-] [16
+[14
 
-] [17
+ <./imagens/terminologia.png>]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 160--160
+ [][][][]  
+ []
 
-] [18
 
-] [19
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
-] [20
-
-] [21
+[15
 
 ]
-<imagens/crossover.png, id=349, 953.5625pt x 296.10625pt>
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[16
+
+]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 166--166
+ [][][][]  
+ []
+
+
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[17
+
+]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 179--179
+ [][][][]  
+ []
+
+
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[18
+
+]
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[19
+
+]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 191--191
+ [][][][]  
+ []
+
+
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[20
+
+]
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[21
+
+]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 199--199
+ [][][][]  
+ []
+
+<imagens/crossover.png, id=312, 953.5625pt x 296.10625pt>
 File: imagens/crossover.png Graphic file (type png)
 <use imagens/crossover.png>
 Package pdftex.def Info: imagens/crossover.png  used on input line 199.
 (pdftex.def)             Requested size: 286.07095pt x 88.83255pt.
- [22
 
- <./imagens/crossover.png>] [23
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
-] [24
+[22
 
-] [25
+ <./imagens/crossover.png>]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 221--221
+ [][][][]  
+ []
 
-] [26
+
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[23
 
 ]
-Overfull \hbox (7.85751pt too wide) in paragraph at lines 228--228
-\T1/cmss/m/n/12 como um AG re-solve o pro-blema da fun-ção $\OT1/mathkerncmss/m
-/sl/12 f\OT1/cmss/m/n/12 (\OT1/mathkerncmss/m/sl/12 x\OT1/cmss/m/n/12 ) = \OT1/
-mathkerncmss/m/sl/12 x\OT1/cmss/m/n/12 ([](\T1/cmss/m/n/12 10\OML/cmm/m/it/12 ^
-^Y\OT1/mathkerncmss/m/sl/12 x\OT1/cmss/m/n/12 )) +
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[24
+
+]
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[25
+
+]
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[26
+
+]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 228--228
+ [][][][]  
+ []
+
+
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
  []
 
 [27
 
-] [28
+]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 238--238
+ [][][][]  
+ []
 
-] [29
+
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[28
 
 ]
-<imagens/binario_1.png, id=469, 456.70625pt x 246.9225pt>
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 243--243
+ [][][][]  
+ []
+
+
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[29
+
+]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 250--250
+ [][][][]  
+ []
+
+<imagens/binario_1.png, id=419, 456.70625pt x 246.9225pt>
 File: imagens/binario_1.png Graphic file (type png)
 <use imagens/binario_1.png>
 Package pdftex.def Info: imagens/binario_1.png  used on input line 250.
 (pdftex.def)             Requested size: 228.35255pt x 123.46094pt.
- [30
+
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[30
 
  <./imagens/binario_1.png>]
-<imagens/binario_2.png, id=480, 682.55pt x 241.90375pt>
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 258--258
+ [][][][]  
+ []
+
+<imagens/binario_2.png, id=428, 682.55pt x 241.90375pt>
 File: imagens/binario_2.png Graphic file (type png)
 <use imagens/binario_2.png>
 Package pdftex.def Info: imagens/binario_2.png  used on input line 258.
 (pdftex.def)             Requested size: 273.01517pt x 96.75978pt.
- [31
+
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[31
 
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./imagens/binario
-_2.png>] [32
+_2.png>]
+Overfull \hbox (203.37817pt too wide) in paragraph at lines 268--268
+ [][][][]  
+ []
+
+
+Overfull \hbox (203.37817pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[32
 
 ]
 \tf@nav=\write6
@@ -1220,26 +1500,26 @@ Package rerunfilecheck Info: File `slide.out' has not changed.
 (rerunfilecheck)             Checksum: F646EED53778152134293FAB429A229F;562.
  ) 
 Here is how much of TeX's memory you used:
- 28823 strings out of 469494
- 583595 string characters out of 5469291
- 961651 words of memory out of 5000000
- 56860 multiletter control sequences out of 15000+600000
- 642589 words of font info for 77 fonts, out of 8000000 for 9000
+ 28809 strings out of 469494
+ 582821 string characters out of 5469291
+ 956413 words of memory out of 5000000
+ 56848 multiletter control sequences out of 15000+600000
+ 643357 words of font info for 78 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 128i,15n,123p,431b,693s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,431b,708s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/tex
-mf/fonts/type1/public/cm-super/sfsi1200.pfb></usr/share/texmf/fonts/type1/publi
+mf/fonts/type1/public/cm-super/sfsi1440.pfb></usr/share/texmf/fonts/type1/publi
 c/cm-super/sfsi1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0600.
 pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texm
 f/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public
-/cm-super/sfss1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1200.p
-fb>
-Output written on slide.pdf (32 pages, 572719 bytes).
+/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1728.p
+fb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1200.pfb>
+Output written on slide.pdf (32 pages, 660870 bytes).
 PDF statistics:
- 564 PDF objects out of 1000 (max. 8388607)
- 354 compressed objects within 4 object streams
+ 513 PDF objects out of 1000 (max. 8388607)
+ 324 compressed objects within 4 object streams
  69 named destinations out of 1000 (max. 500000)
- 631 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 618 words of extra memory for PDF output out of 10000 (max. 10000000)
 
