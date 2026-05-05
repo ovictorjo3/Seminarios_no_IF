@@ -29,27 +29,16 @@
 \AtBeginEnvironment{frame}{\justifying} 
 
 
-\author[Prof. Dr. Tacildo Araujo \& Joao Victor]{% 
+\author[Prof. Tacildo Araujo \& Joao Victor]{% 
 	Prof. Dr. Tacildo Araújo\inst{1} \and Joao Victor\inst{2}}
-\title{Algoritmos Genéticos (AGs) para Minimização de Funções: Uma Abordagem Introdutória com Apoio do Excel}
+\title[Algoritmos Genéticos (AGs)]{Algoritmos Genéticos (AGs) para Minimização de Funções: Uma Abordagem Introdutória com Apoio do Excel}
 \institute[]{% 
 	\textsuperscript{1} Orientador	
 	\textsuperscript{2} Graduando em Matemática
 }
 \date{\today} 
-%\titlegraphic{\includegraphics[width=0.35\textwidth]{imagens/logo_5.png}}
- \titlegraphic{
-	 	\begin{columns}[c]
-		 		\begin{column}{0.6\textwidth}
-			 			\centering
-			 			\includegraphics[width=0.5\textwidth]{imagens/logo.png}  % Primeira logo
-			 	\end{column}
-		 		\begin{column}{0.35\textwidth}
-			 			\centering
-			 			\includegraphics[width=0.45\textwidth]{imagens/semat.png}  % Segunda logo
-			 		\end{column}
-		 	\end{columns}
-	 }
+\titlegraphic{\includegraphics[width=0.29\textwidth]{imagens/logo_final.png}}
+
 
 
 
@@ -66,161 +55,106 @@
 	
 	\section{Contextualização}
 	
-		\begin{frame}{O Problema da mochila (\textit{Knapsack problem})}
+		\begin{frame}{Contextualização}
 			\justifying
-			Imagine que você está planejando uma viagem de acampamento e tem espaço limitado na mochila. Você quer maximizar o valor dos itens que leva, respeitando o limite de peso da mochila. Você tem uma lista de itens, cada um com um peso e um valor, e quer escolher os de maior valor. 
-		
-			\begin{center}
-				\includegraphics[scale=0.35]{imagens/problema_mochila.png}
-			\end{center} 
-		
-		\end{frame}
-	
-		\begin{frame}{O Problema da mochila (\textit{Knapsack problem})}
-			\justifying
-			Segue uma lista de itens de exemplo:
-			\begin{center}
-				\includegraphics[scale=0.28]{imagens/itens.png}
-			\end{center} O objetivo é selecionar os itens que maximizem o valor, garantindo que o peso total dos itens na mochila não exceda a capacidade máxima de 10 kg.
-		
-		\end{frame}
-	
-		\begin{frame}{Problemas de otimização continuo}
-			\justifying
-			Imagine que você precisa ajustar um parâmetro x para minimizar o custo de um sistema, que varia conforme a função $f(x)=x(\sin(10\pi x))+1$. O gráfico abaixo mostra como essa função possui vários vales (mínimos locais) e um vale mais profundo (mínimo global).
-		
-			$$\includegraphics[scale=0.29]{imagens/grafico_funcao.png}$$
-		
-		
-		\end{frame}
-	
-	\section{Introdução}
-	
-		\begin{frame}{Introdução}
-			\justifying
-		
-			O Problema da Mochila e a minimização da função $f(x)=x(\sin(10\pi x))+1$ são problemas de otimização resolvidos com Algoritmos Genéticos (AG). O primeiro busca maximizar o valor de itens com peso limitado. O segundo encontra o mínimo global de uma função com múltiplos mínimos locais. Em ambos, o AG encontra soluções próximas da ótima de forma eficiente, sem exigir derivadas ou buscas exaustivas.
-		\end{frame}
-	
-	
-		\begin{frame}{Definição}
-			\begin{block}{Conforme Pozo et al. (2003): }
+			\begin{block}{Conforme Alexandre Dias e André Gonçalves:}
 				\begin{itemize}
-					\item O Algoritmo Genético é uma das técnicas da computação evolucionária de busca e otimização inspirada na evolução natural das espécies de Darwin.
-				
-					\item \uncover<2->{A ideia é criar uma população de indivíduos que vão se reproduzir e competir pela sobrevivência, onde os melhores indivíduos sobrevivem e transferem suas características para novas gerações, até que se alcance uma solução próxima ao resultado ótimo.} 
+					\item Passos inspirados no processo biológico de evolução;
+					\uncover<2->{
+					\item Ideia de sobrevivência dos mais adaptados - Charles Darwin (Origem das Espécies, 1859);
+					} 
+					\uncover<3->{
+					\item Soluções cada vez melhores, a partir da evolução
+					das gerações anteriores, até que uma solução
+					próxima do ótimo seja obtida;
+					}
+					\uncover<4->{
+					\item O método produz novas gerações melhores com
+					base na medida de uma função de fitness;
+					}
+					
 				\end{itemize}
-			\end{block} 
-		\end{frame}
-	
-		\begin{frame}{O Algortimo Genético}
-			\justifying
-			Para Vitor Emanuel Batista (2020), o desenvolvimento de simulações computacionais de sistemas genéticos teve início na década de 50 e 60 a partir de biólogos e foi John Holland quem iniciou as primeiras pesquisas sobre o tema, publicando, em 1975, o livro “Adaptation in Natural and Artificial Systems”.
-		\end{frame}
-	
-		\begin{frame}{O Algortimo Genético}
-			\justifying
-			Posteriormente se iniciariam aplicações industriais dos algoritmos genéticos com David E. Goldberg, aluno de Holland, e hoje esses algoritmos são utilizados para solucionar problemas de otimização e aprendizado de máquinas, argumenta Batista (2020).
-		\end{frame}
-	
-		\begin{frame}{O Algortimo Genético}
-			\justifying
-			Conforme Pozo et al. (2003), a ideia básica de funcionamento dos algoritmos genéticos é a de tratar as possíveis soluções do problema como "indivíduos" de uma "população", que irá "evoluir" a cada iteração ou "geração". Para isso é necessário construir um modelo de evolução onde os indivíduos sejam soluções de um problema
-		\end{frame}
-	
-		\begin{frame}{O Algortimo Genético}
-			\begin{itemize}
-			\item Antes de detalhar o comportamento do algoritmo genético propriamente dito, se faz necessária a compreensão da terminologia adotada para representar as entidades e processos envolvidos. 
+			\end{block}
 			
-			\uncover<2->{
-			\item Os termos, análogos aos da biologia, referem-se no algoritmo à construção das possíveis soluções ao problema abordado.
-			}
+		\end{frame}
+	
+	
+	\section{Estrutura de um AG}
+	
+		\begin{frame}{Estrutura de um AG}
+			\includegraphics[scale=0.35]{imagens/estrutura.png}
+		\end{frame}
+	
+	
+		\begin{frame}{O Algortimo Genético}
+			\justifying
+			Conforme Pozo et al. (2003), a ideia básica de funcionamento dos algoritmos genéticos é a de tratar as possíveis soluções do problema como indivíduos de uma população, que irá evoluir a cada iteração ou geração. Para isso é necessário construir um modelo de evolução onde os indivíduos sejam soluções de um problema.
+		\end{frame}
+	
+	
+		\begin{frame}{Algoritmo de um AG}
+			\includegraphics[scale=0.35]{imagens/algoritmo.png}
+		\end{frame}
+		
+	
+	\section{O problema da mochila (\textit{Knapsack Problem})}
+	
+		\begin{frame}{Problema da Mochila - (\textit{Knapsack Problem})}
+			\begin{columns}
+				\begin{column}{0.48\textwidth}
+					\begin{itemize}
+						\justifying
+						\item Vários itens que gostaria de
+						levar em uma mochila;
+						\item Cada item com um peso e um
+						benefício (valor);
+						\item Há uma capacidade limite de
+						peso;
+						\item Deve-se carregar itens com o
+						máximo valor total sem
+						superar o limite de peso.
+					\end{itemize}
+				\end{column}
+				
+				\begin{column}{0.48\textwidth}
+					\includegraphics[scale=0.3]{imagens/mochila.png}
+				\end{column}
+			\end{columns}
+		\end{frame}
+		
+		\begin{frame}{Problema da Mochila - (\textit{Knapsack Problem})}
+			\justifying
+			\begin{itemize}
+				\item Problema de otimização combinatória (NP-Completo);
+				\item Estudado por mais de um século (desde ~1897);
+				\item Resolvido por variados algoritmos;
+				\item Aplicações: gravação de arquivos desperdiçando o mínimo espaço em cada mídia, corte e empacotamento, por exemplo.
 			\end{itemize}
 		\end{frame}
-	
-	\section{Terminologia de um AG}
-	
-		\begin{frame}{Terminologia de um AG}
-			Vamos detalhar os seguintes termos da imagem:
 		
-			$$\includegraphics[scale=0.35]{imagens/terminologia.png}$$
-		\end{frame}
-		
-		\begin{frame}{Cromossomo}
-			\begin{block}{Conforme Koza (1992) e Batista (2020):}
-				\begin{itemize}
-					\justifying
-					\item Cada cromossomo representa uma solução do problema, tomado também como sinônimo de indivíduo, representado por uma cadeia de símbolos (genes).
-					
-					\uncover<2->{
-					\item Uma das principais formas de representar um cromossomo é através de uma sequência de bits, onde cada bit ativo (1) representa a presença de uma característica e cada bit inativo (0) representa a ausência dessa característica 
-					}
-				\end{itemize}
-			\end{block}
-		\end{frame}
-		
-		\begin{frame}{Cromossomo}
-			\justifying
+		\begin{frame}{Problema da Mochila - (\textit{Knapsack Problem})}
+			Exemplo:
 			
-			Comparando com a genética dos seres vivos, cada bit da cadeia representaria um gene, menor unidade de informação em um cromossomo, e a cadeia de bits representa o \textbf{cromossomo}, que é a resultante do problema.
-		\end{frame}
-		
-		\begin{frame}{População}
-			\begin{block}{Segundo Patricia Vargas (2000:)}
-				\justifying
-				\begin{itemize}
-					\item É o conjunto de cromossomos (ou indivíduos) gerados que são disponibilizados como possíveis soluções para o problema apontado e que serão utilizados para a produção de novos indivíduos;
-					
-					\uncover<2->{
-					\item O tamanho da população inicial e das subsequentes gerações são um aspecto importante a ser considerado para o sucesso do processo evolutivo, pois é possível comprometer a evolução dos indivíduos caso a quantidade escolhida seja muito pequena ou muito grande.
-					}
-				\end{itemize}
-			\end{block}
-		\end{frame}
-		
-		\begin{frame}{Cruzamento (ou \textit{crossover})}
-			\begin{block}{Fabrício Bueno (2009) argumenta:}
-				\begin{itemize}
-					\item É um processo de reprodução sexuada em que há combinação de genes dos cromossomos originando um ou mais descendentes;
-					
-					\uncover<2->{
-					\item O cruzamento é o principal responsável pela variabilidade genética.
-					}
-				\end{itemize}
-			\end{block}
-		\end{frame}
-		
-		\begin{frame}{Cruzamento (ou \textit{crossover})}
-			\justifying
-			Exemplo de reprodução sexuada em que há combinação de genes dos cromossomos originando um ou mais descendentes. 
+			\begin{table}[h]
+				\centering
+				\begin{tabular}{l|c|c|c|c|c|c|c|}
+					\hline
+					Item & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+					\hline
+					Benefício & 5 & 8 & 3 & 2 & 7 & 9 & 4 \\
+					\hline
+					Peso & 7 & 8 & 4 & 10 & 4 & 6 & 4 \\
+					\hline
+				\end{tabular}
+				\caption{Itens do problema da mochila}
+			\end{table}
 			
-			$$\includegraphics[scale=0.3]{imagens/crossover.png}$$
-			
+			\begin{itemize}
+				\item Mochila suporta, no máximo, (21+1) quilos;
+				\item Adicione itens de modo a ter o máximo
+				benefício.
+			\end{itemize}
 		\end{frame}
-		
-		\begin{frame}{Outras terminologias}
-			\begin{block}{Fabrício Bueno (2009) apresenta:}
-				\justifying
-				\begin{itemize}
-				
-					\item \textbf{Mutação}: anomalias que causam a alteração aleatória de genes, seja na sua localização, seja no seu conteúdo;
-					
-					\uncover<2->{
-					\item \textbf{Geração}: iteração do algoritmo genético;
-					}
-					
-					\uncover<3->{
-					\item \textbf{Aptidão (ou fitness)}: indicador qualitativo de um indivíduo. O grau de aptidãode um indivíduo é obtido a partir de uma função objetivo;
-					}
-					
-					\uncover<4->{
-					\item \textbf{Função objetivo}: função matemática que avalia as soluções (indivíduos) emrelação ao problema.
-					}
-				\end{itemize}
-			\end{block}
-		\end{frame}
-		
-	\section{Conversão binário-decimal}
 	
 		\begin{frame}{Conversão binário-decimal}
 			\justifying
