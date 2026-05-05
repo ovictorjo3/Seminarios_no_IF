@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.30)  5 MAY 2026 08:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.30)  5 MAY 2026 09:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1082,9 +1082,20 @@ Overfull \vbox (5.6403pt too high) detected at line 50
 dvips/cm-super/cm-super-t1.enc} <./imagens/logo_final.png>] (./slide.toc)
 [2
 
-] [3
+]
+<imagens/viagem.png, id=76, 702.625pt x 466.74374pt>
+File: imagens/viagem.png Graphic file (type png)
+<use imagens/viagem.png>
+Package pdftex.def Info: imagens/viagem.png  used on input line 76.
+(pdftex.def)             Requested size: 136.27615pt x 90.52681pt.
+ [3
 
-] [4
+ <./imagens/viagem.png>]
+File: imagens/viagem.png Graphic file (type png)
+<use imagens/viagem.png>
+Package pdftex.def Info: imagens/viagem.png  used on input line 76.
+(pdftex.def)             Requested size: 136.27615pt x 90.52681pt.
+ [4
 
 ] [5
 
@@ -1092,89 +1103,93 @@ dvips/cm-super/cm-super-t1.enc} <./imagens/logo_final.png>] (./slide.toc)
 
 ] [7
 
+] [8
+
+] [9
+
 ]
-<imagens/estrutura.png, id=161, 1010.77625pt x 640.3925pt>
+<imagens/estrutura.png, id=176, 1010.77625pt x 640.3925pt>
 File: imagens/estrutura.png Graphic file (type png)
 <use imagens/estrutura.png>
-Package pdftex.def Info: imagens/estrutura.png  used on input line 89.
+Package pdftex.def Info: imagens/estrutura.png  used on input line 109.
 (pdftex.def)             Requested size: 353.77698pt x 224.14073pt.
 
-Overfull \hbox (13.08138pt too wide) in paragraph at lines 89--89
+Overfull \hbox (13.08138pt too wide) in paragraph at lines 109--109
 [][]  
  []
 
 
-Overfull \vbox (5.55066pt too high) detected at line 89
- []
-
-[8
-
- <./imagens/estrutura.png>] [9
-
-]
-<imagens/algoritmo.png, id=177, 1007.765pt x 611.28375pt>
-File: imagens/algoritmo.png Graphic file (type png)
-<use imagens/algoritmo.png>
-Package pdftex.def Info: imagens/algoritmo.png  used on input line 100.
-(pdftex.def)             Requested size: 352.72304pt x 213.95251pt.
-
-Overfull \hbox (12.02744pt too wide) in paragraph at lines 100--100
-[][]  
+Overfull \vbox (5.55066pt too high) detected at line 109
  []
 
 [10
 
- <./imagens/algoritmo.png>]
-<imagens/mochila.png, id=187, 509.905pt x 445.665pt>
-File: imagens/mochila.png Graphic file (type png)
-<use imagens/mochila.png>
-Package pdftex.def Info: imagens/mochila.png  used on input line 126.
-(pdftex.def)             Requested size: 152.97267pt x 133.70053pt.
- [11
-
- <./imagens/mochila.png>] [12
-
-] [13
-
-] [14
+ <./imagens/estrutura.png>] [11
 
 ]
-[15
+<imagens/algoritmo.png, id=192, 1007.765pt x 611.28375pt>
+File: imagens/algoritmo.png Graphic file (type png)
+<use imagens/algoritmo.png>
+Package pdftex.def Info: imagens/algoritmo.png  used on input line 120.
+(pdftex.def)             Requested size: 352.72304pt x 213.95251pt.
+
+Overfull \hbox (12.02744pt too wide) in paragraph at lines 120--120
+[][]  
+ []
+
+[12
+
+ <./imagens/algoritmo.png>]
+<imagens/mochila.png, id=203, 509.905pt x 445.665pt>
+File: imagens/mochila.png Graphic file (type png)
+<use imagens/mochila.png>
+Package pdftex.def Info: imagens/mochila.png  used on input line 146.
+(pdftex.def)             Requested size: 152.97267pt x 133.70053pt.
+ [13
+
+ <./imagens/mochila.png>] [14
+
+] [15
 
 ] [16
 
-] [17
+]
+[17
 
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-[18
+] [18
 
 ] [19
 
-] [20
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[20
 
 ] [21
 
 ] [22
 
+] [23
+
+] [24
+
 ]
-<imagens/crossover_mutacao.png, id=330, 652.4375pt x 518.93875pt>
+<imagens/crossover_mutacao.png, id=344, 652.4375pt x 518.93875pt>
 File: imagens/crossover_mutacao.png Graphic file (type png)
 <use imagens/crossover_mutacao.png>
-Package pdftex.def Info: imagens/crossover_mutacao.png  used on input line 295.
+Package pdftex.def Info: imagens/crossover_mutacao.png  used on input line 315.
 
 (pdftex.def)             Requested size: 228.35654pt x 181.63129pt.
 
-Overfull \vbox (7.41621pt too high) detected at line 295
+Overfull \vbox (7.41621pt too high) detected at line 315
  []
 
-[23
+[25
 
  <./imagens/crossover_mutacao.png>]
 
 LaTeX Font Warning: Font shape `T1/cmss/b/n' undefined
-(Font)              using `T1/cmss/m/n' instead on input line 313.
+(Font)              using `T1/cmss/m/n' instead on input line 333.
 
-[24
+[26
 
 ]
 \tf@nav=\write6
@@ -1199,10 +1214,10 @@ Package rerunfilecheck Info: File `slide.out' has not changed.
 (rerunfilecheck)             Checksum: BE686B77C175ACB2B44A705EAC4D83AC;678.
  ) 
 Here is how much of TeX's memory you used:
- 28759 strings out of 469494
- 581726 string characters out of 5469291
+ 28772 strings out of 469494
+ 581954 string characters out of 5469291
  960218 words of memory out of 5000000
- 56811 multiletter control sequences out of 15000+600000
+ 56820 multiletter control sequences out of 15000+600000
  645810 words of font info for 81 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  128i,15n,123p,397b,734s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1221,10 +1236,10 @@ per/sfss1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></u
 sr/share/texmf/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sfss1728.pfb></usr/share/texmf/fonts/type1/public/cm-sup
 er/sfsx1200.pfb>
-Output written on slide.pdf (24 pages, 564980 bytes).
+Output written on slide.pdf (26 pages, 1257173 bytes).
 PDF statistics:
- 441 PDF objects out of 1000 (max. 8388607)
- 279 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
- 490 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 457 PDF objects out of 1000 (max. 8388607)
+ 291 compressed objects within 3 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 495 words of extra memory for PDF output out of 10000 (max. 10000000)
 
