@@ -20,7 +20,7 @@
 \usepackage{tcolorbox}
 \usepackage{colortbl}
 \usepackage{xcolor}
-\newcommand{\euler}{e}
+
 
 \addtobeamertemplate{block begin}{}{\justifying}
 \addtobeamertemplate{block alerted begin}{}{\justifying}
@@ -31,7 +31,7 @@
 
 \author[Prof. Tacildo Araujo \& Joao Victor]{% 
 	Prof. Dr. Tacildo Araújo\inst{1} \and Joao Victor\inst{2}}
-\title[Algoritmos Genéticos (AGs)]{Algoritmos Genéticos (AGs) para Minimização de Funções: Uma Abordagem Introdutória com Apoio do Excel}
+\title[Algoritmos Genéticos (AGs)]{Algoritmos Genéticos (AGs) Para Minimização de Funções: Uma Abordagem Introdutória com Apoio do Excel}
 \institute[]{% 
 	\textsuperscript{1} Orientador	
 	\textsuperscript{2} Graduando em Matemática
@@ -53,9 +53,9 @@
 		\tableofcontents
 	\end{frame}
 	
-	\section{Contextualização}
+	\section{Introdução}
 	
-		\begin{frame}{Contextualização}
+		\begin{frame}{Introdução}
 			\justifying
 			\begin{block}{Conforme Alexandre Dias e André Gonçalves:}
 				\begin{itemize}
@@ -155,52 +155,159 @@
 				benefício.
 			\end{itemize}
 		\end{frame}
-	
-		\begin{frame}{Conversão binário-decimal}
-			\justifying
-			Você já sabe o que é um cromossomo, população e fitness. Mas como um AG resolve o problema da função $f(x)=x(\sin(10\pi x))+1$ se ele trabalha com bits? A resposta está na conversão de binário para decimal.
-		\end{frame}
 		
-		\begin{frame}{Conversão binário-decimal}
-			\begin{block}{Paulo Gabriel e Alexandre Delbem (2008) \textit{apud} Goldberg (1989)}
-				\justifying 
-				Nos AGs canônicos (Goldberg, 1989), as soluções candidatas são codificadas em arrays
-				binários de tamanho fixo. A motivação para o uso de codificação binária é oriunda da teoria dos
-				esquemas (Holland, 1992) utilizada com sucesso para explicar por que os algoritmos genéticos
-				funcionam.
-			\end{block}
-		\end{frame}
 		
-		\begin{frame}{Método das divisões sucesivas}
-			\justifying
-			Conforme Capuano e Ideota (1997), consiste em efetuar-se sucessivas divisões pela base a ser convertida (no caso o 2) até o último quociente possível. O número transformado será composto por este último quociente (algarismo mais significativo) e, todos os restos, na ordem inversa às divisões.
-		\end{frame}
 		
-		\begin{frame}{Método das divisões sucesivas}
+		\begin{frame}{Problema da Mochila - (\textit{Knapsack Problem})}
 			\justifying
-			Dessa forma, temos:
+			\begin{itemize}
+				\item Codificação: 0 = não existe; 1 = existe na mochila
+				\item Cromossomo: 1010110 \\
+			\end{itemize}
+			\vspace{1mm}
+			\centering
+			\begin{tabular}{|c|c|c|c|c|c|c|c|}
+				\hline
+				\textbf{Item} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} \\
+				\hline
+				\textbf{Cromossomo} & 1 & 0 & 1 & 1 & 0 & 1 & 0 \\
+				\hline
+				\textbf{Existe?} & sim & não & sim & sim & não & sim & não \\
+				\hline
+			\end{tabular}
+			 \vspace{2mm}
 			
-			$$\includegraphics[scale=0.5]{imagens/binario_1.png}$$
+			\begin{itemize}
+				\uncover<2->{
+				\item Itens pego: 1,3,4 e 6.
+				}
+			\end{itemize}
+			
 		\end{frame}
 		
-		\begin{frame}{Método das divisões sucesivas}
-			\justifying
+		\begin{frame}{Problema da Mochila - (\textit{Knapsack Problem})}
+			Geração aleatória de população com n cromossomos:
 			
-			O último quociente será algarismo mais significativo e ficará colocado à esquerda. Os outros algarismos seguem-se na ordem até o 1º resto:
-			
-			$$\includegraphics[scale=0.4]{imagens/binario_2.png}$$
-		\end{frame}
-		
-		\begin{frame}{Método das divisões sucesivas}
-			\justifying
-			
-			Converta os seguintes números da base decimal para a base binária:
 			\begin{enumerate}
-				\item [a)]$21_ {10}$
-				\item [b)] $400_{10}$ 
+				\item [a)] 0101010
+				\item [b)] 1100100
+				\item [c)] 0100011
 			\end{enumerate}
 		\end{frame}
 		
+		\begin{frame}{Problema da Mochila - (\textit{Knapsack Problem})}
+			\justifying
+			Aplicando função fitness \& seleção para o item a \\
+			
+			\centering
+			\vspace{2mm}
+			\begin{tabular}{|c|c|c|c|c|c|c|c|}
+				\hline
+				Item & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+				\hline
+				Cromossomo & 0 & 1 & 0 & 1 & 0 & 1 & 0 \\
+				\hline
+				Benefício & 5 & 8 & 3 & 2 & 7 & 9 & 4 \\
+				\hline
+				Peso & 7 & 8 & 4 & 10 & 4 & 6 & 4 \\
+				\hline
+			\end{tabular}
+			
+			\vspace{2mm}
+			\begin{itemize}
+				\item [a)] Benefício = 19; Peso = 24 (\textit{Adeus, mochila! \textcolor{red}{\texttimes}})
+			\end{itemize}
+		\end{frame}
+		
+		\begin{frame}{Problema da Mochila - (\textit{Knapsack Problem})}
+			\begin{block}{O que cabe na mochila?}
+				\begin{enumerate}
+					\item [b)] 1100100;
+					
+					\uncover<2->{
+					\item [c)] 0100011;
+					}
+				\end{enumerate}
+			\end{block}
+			\vspace{2mm}
+			
+			\centering
+			\begin{tabular}{|c|c|c|c|c|c|c|c|}
+				\hline
+				Item & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+				\hline
+				Cromossomo &  &  &  &  &  &  &  \\
+				\hline
+				Benefício & 5 & 8 & 3 & 2 & 7 & 9 & 4 \\
+				\hline
+				Peso & 7 & 8 & 4 & 10 & 4 & 6 & 4 \\
+				\hline
+			\end{tabular}
+			\vspace{2mm}
+			
+			\begin{itemize}
+				\uncover<2->{
+				\item [b)] Benefício = 20; Peso = 19 (\textit{solução viável $\checkmark$})
+				}
+			\end{itemize}
+		\end{frame}
+	
+		\begin{frame}{Problema da Mochila - (\textit{Knapsack Problem})}
+			\begin{block}{O que cabe na mochila?}
+				\begin{enumerate}
+					\item [c)] 0100011;
+				\end{enumerate}
+			\end{block}
+			\vspace{2mm}
+			
+			\centering
+			\begin{tabular}{|c|c|c|c|c|c|c|c|}
+				\hline
+				Item & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+				\hline
+				Cromossomo &  &  &  &  &  &  &  \\
+				\hline
+				Benefício & 5 & 8 & 3 & 2 & 7 & 9 & 4 \\
+				\hline
+				Peso & 7 & 8 & 4 & 10 & 4 & 6 & 4 \\
+				\hline
+			\end{tabular}
+			\vspace{2mm}
+			
+			\begin{itemize}
+				\uncover<2->{
+					\item [c)] Benefício = 21; Peso = 18 (\textit{solução ótima $\checkmark$})
+				}
+			\end{itemize}
+			
+			\centering
+			\uncover<3->{Serão selecionados os cromossomos b e c.}
+			
+		\end{frame}		
+		
+		\begin{frame}{Problema da Mochila - (\textit{Knapsack Problem})}
+			Compreendendo o processo de Crossover e mutação.
+			
+			$$\includegraphics[scale=0.35]{imagens/crossover_mutacao.png}$$
+		\end{frame}
+	
+	\section{AG na Prática com Excel}
+	
+		\begin{frame}{Considere a seguinte situação}
+			\centering
+			Seja $\mathbf{x} = (x_1, x_2, \ldots, x_7)$ um cromossomo, com $x_i \in \{0,1\}$.
+			\textbf{Função objetivo (fitness):}
+			\[
+			f(\mathbf{x}) = \sum_{i=1}^{7} b_i x_i = 5x_1 + 8x_2 + 3x_3 + 2x_4 + 7x_5 + 9x_6 + 4x_7
+			\]
+			\textbf{Restrição:}
+			\[
+			g(\mathbf{x}) = \sum_{i=1}^{7} p_i x_i = 7x_1 + 8x_2 + 4x_3 + 10x_4 + 4x_5 + 6x_6 + 4x_7 \leq 22
+			\]
+			\begin{center}
+				Maximizar $f(\mathbf{x})$ \quad sujeito a \quad $g(\mathbf{x}) \leq 22$
+			\end{center}
+		\end{frame}
 \end{document}
 
 
