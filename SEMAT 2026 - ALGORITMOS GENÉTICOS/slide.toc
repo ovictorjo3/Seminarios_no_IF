@@ -1,5 +1,5 @@
 \babel@toc {brazil}{}\relax 
 \beamer@sectionintoc {1}{Introdução}{3}{0}{1}
-\beamer@sectionintoc {2}{Estrutura de um AG}{7}{0}{2}
-\beamer@sectionintoc {3}{O problema da mochila (\textit {Knapsack Problem})}{10}{0}{3}
-\beamer@sectionintoc {4}{AG na Prática com Excel}{23}{0}{4}
+\beamer@sectionintoc {2}{Estrutura de um AG}{8}{0}{2}
+\beamer@sectionintoc {3}{O problema da mochila (\textit {Knapsack Problem})}{11}{0}{3}
+\beamer@sectionintoc {4}{AG na Prática com Excel}{24}{0}{4}
