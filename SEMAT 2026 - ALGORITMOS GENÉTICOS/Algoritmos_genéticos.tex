@@ -149,8 +149,11 @@
 \setbeamerfont{date}{size=\small}
 \setbeamerfont{institute}{size={\normalsize}}
 \title[IFAM/CMC]{\textbf{Algoritmos Genéticos para minimização de funções: uma abordagem com apoio do excel}}
-%\subtitle{\textbf{Apresentação da disciplin}}
+
 \author[Prof. Dr. Tacildo de S. Araújo]{Joao Victor \& Tacildo Araújo}
+\date{\today}
+\titlegraphic{\includegraphics[width=0.3\textwidth]{imagens/logo_final.png}}
+
 
 \institute[]{Instituto Federal de Educação, Ciência e Tecnologia do Amazonas \\ Campus Manaus Centro }
 
@@ -626,6 +629,135 @@
 		f(x)\approx 0.9822.
 		\]
 	\end{alertblock}
+\end{frame}
+
+\begin{frame}{O Clássico Problema da Mochila (Knapsack Problem)}
+
+		\begin{columns}
+			\begin{column}{0.48\textwidth}
+				\begin{itemize}
+					\justifying
+					\item Vários itens que gostaria de
+					levar em uma mochila;
+					\item Cada item com um peso e um
+					benefício (valor);
+					\item Há uma capacidade limite de
+					peso;
+					\item Deve-se carregar itens com o
+					máximo valor total sem
+					superar o limite de peso.
+				\end{itemize}
+			\end{column}
+			
+			\begin{column}{0.48\textwidth}
+				\includegraphics[scale=0.3]{imagens/mochila.png}
+			\end{column}
+		\end{columns}
+
+\end{frame}
+
+\begin{frame}{Problema da Mochila - (\textit{Knapsack Problem})}
+	Exemplo:
+	
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{l|c|c|c|c|c|c|c|}
+			\hline
+			Item & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+			\hline
+			Benefício & 5 & 8 & 3 & 2 & 7 & 9 & 4 \\
+			\hline
+			Peso & 7 & 8 & 4 & 10 & 4 & 6 & 4 \\
+			\hline
+		\end{tabular}
+		\caption{Itens do problema da mochila}
+	\end{table}
+	
+	\begin{itemize}
+		\item Mochila suporta, no máximo, (22) quilos;
+		\item Adicione itens de modo a ter o máximo
+		benefício.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Problema da Mochila - (\textit{Knapsack Problem})}
+	\justifying
+	\begin{itemize}
+		\item Codificação: 0 = não existe; 1 = existe na mochila
+		\item Cromossomo: 1010110 \\
+	\end{itemize}
+	\vspace{1mm}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		\textbf{Item} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} \\
+		\hline
+		\textbf{Cromossomo} & 1 & 0 & 1 & 1 & 0 & 1 & 0 \\
+		\hline
+		\textbf{Existe?} & sim & não & sim & sim & não & sim & não \\
+		\hline
+	\end{tabular}
+	\vspace{2mm}
+	
+	\begin{itemize}
+		\uncover<2->{
+			\item Itens pegos: 1,3,4 e 6.
+		}
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}{Problema da Mochila - (\textit{Knapsack Problem})}
+	\justifying
+	Aplicando função fitness \& seleção para o item a. \\
+	
+	\centering
+	\vspace{2mm}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Item & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+		\hline
+		Cromossomo & 0 & 1 & 0 & 1 & 0 & 1 & 0 \\
+		\hline
+		Benefício & 5 & 8 & 3 & 2 & 7 & 9 & 4 \\
+		\hline
+		Peso & 7 & 8 & 4 & 10 & 4 & 6 & 4 \\
+		\hline
+	\end{tabular}
+	
+	\vspace{2mm}
+	\begin{itemize}
+		\item [a)] Benefício = 19; Peso = 24 (\textit{Adeus, mochila! \textcolor{red}{\texttimes}})
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Problema da Mochila - (\textit{Knapsack Problem})}
+	\begin{block}{O que cabe na mochila?}
+		\begin{enumerate}
+			\item [b)] 1100100;
+		\end{enumerate}
+	\end{block}
+	\vspace{2mm}
+	
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Item & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+		\hline
+		Cromossomo &  &  &  &  &  &  &  \\
+		\hline
+		Benefício & 5 & 8 & 3 & 2 & 7 & 9 & 4 \\
+		\hline
+		Peso & 7 & 8 & 4 & 10 & 4 & 6 & 4 \\
+		\hline
+	\end{tabular}
+	\vspace{2mm}
+	
+	\begin{itemize}
+		\uncover<2->{
+			\item [b)] Benefício = 20; Peso = 19 (\textit{solução viável $\checkmark$})
+		}
+	\end{itemize}
 \end{frame}
 
 
