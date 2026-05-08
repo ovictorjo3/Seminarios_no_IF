@@ -3,4 +3,5 @@
 \beamer@sectionintoc {2}{Fundamentos e Princípios}{6}{0}{2}
 \beamer@sectionintoc {3}{Desafios e Contradições}{31}{0}{3}
 \beamer@sectionintoc {4}{Algumas Impressões}{48}{0}{4}
-\beamer@sectionintoc {5}{Referências}{53}{0}{5}
+\beamer@sectionintoc {5}{Perguntas para reflexão}{53}{0}{5}
+\beamer@sectionintoc {6}{Referências}{60}{0}{6}
