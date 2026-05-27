@@ -3,6 +3,6 @@
 \beamer@sectionintoc {2}{Principais Sistemas}{7}{0}{2}
 \beamer@sectionintoc {3}{Vantagens e Desvantagens}{8}{0}{3}
 \beamer@sectionintoc {4}{Aplicações}{10}{0}{4}
-\beamer@sectionintoc {5}{Sistema de Amortização Misto (SAM)}{14}{0}{5}
-\beamer@sectionintoc {6}{Sistema Americano}{18}{0}{6}
-\beamer@sectionintoc {7}{Referências}{20}{0}{7}
+\beamer@sectionintoc {5}{Sistema de Amortização Misto (SAM)}{16}{0}{5}
+\beamer@sectionintoc {6}{Sistema Americano}{20}{0}{6}
+\beamer@sectionintoc {7}{Referências}{22}{0}{7}

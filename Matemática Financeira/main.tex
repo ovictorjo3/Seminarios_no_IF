@@ -25,10 +25,10 @@
 \addtobeamertemplate{block alerted}{}{\justifying}
 
 \author[Joao Victor]{% 
-	Joao Victor\inst{1} \and Joseph Cesar\inst{2} \and Everton de Souza\inst{3} \and Kauã Vidal\inst{4}}
+	Joao Victor\inst{1} \and Joseph Cesar\inst{2} \and Everton de Souza\inst{3}}
 \title[Planos de Amortização]{Empréstimos e Planos de Amortização}
 \institute[]{% 	
-	\textsuperscript{1,2,3,4} Graduando em Matemática
+	\textsuperscript{1,2,3} Graduando em Matemática
 }
 \titlegraphic{\includegraphics[width=0.13\textwidth]{imagens/logo_3.jpg}}
 \date{\today} 
@@ -155,9 +155,10 @@
 		\begin{frame}{Financiamento SAC}
 			\begin{exampleblock}{Exemplo 01.}
 				\justifying
-				Pedro tomou um empréstimo de R\$ 1000,00, a ser pago em 5 parcelas mensais, à taxa de juros de 10\% ao mês. Quais são os valores de cada parcela? Considere o Sistema SAC.
+				Pedro tomou um empréstimo de R\$ 10.000, a ser pago em 5 parcelas mensais, à taxa de juros de 10\% ao mês. Quais são os valores de cada parcela? Considere o Sistema SAC.
 			\end{exampleblock}
 		\end{frame}
+
 		
 		\begin{frame}{Financiamento SAC - Exemplo 01.}
 			\begin{table}[h]
@@ -166,7 +167,7 @@
 					\hline
 					MÊS & DÍVIDA & AMORT & JUROS & PARCELA & SALDO \\
 					\hline
-					0 & - & - & - & - & 10000 \\
+					0 & - & - & - & - & 10.000 \\
 					\hline
 					1 & & & & & \\
 					\hline
@@ -183,10 +184,17 @@
 			\end{table}
 		\end{frame}
 		
+		\begin{frame}{Financiamento SAC}
+			Gráfico:
+			
+			$$\includegraphics[scale=0.45]{imagens/grafico_sac.png}$$
+		\end{frame}
+		
+		
 		\begin{frame}{Financiamento Price}
 			\begin{exampleblock}{Exemplo 02.}
 				\justifying
-				Pedro tomou um empréstimo de R\$ 1000,00, a ser pago em 5 parcelas mensais, à taxa de juros de 10\% ao mês. Quais são os valores de cada parcela? Considere o Sistema Price.
+				Pedro tomou um empréstimo de R\$ 10.000, a ser pago em 5 parcelas mensais, à taxa de juros de 10\% ao mês. Quais são os valores de cada parcela? Considere o Sistema Price.
 			\end{exampleblock}
 		\end{frame}	
 		
@@ -197,7 +205,7 @@
 				\hline
 				MÊS & DÍVIDA & AMORT & JUROS & PARC & SALDO \\
 				\hline
-				0 & & & & & 10000 \\
+				0 & & & & & 10.000 \\
 				\hline
 				1 & & & & & \\
 				\hline
@@ -212,6 +220,13 @@
 			\end{tabular}
 			\caption{Tabela Price}
 		\end{table}
+		\end{frame}
+		
+		
+		\begin{frame}{Financiamento - Price}
+			Gráfico:
+			
+			$$\includegraphics[scale=0.45]{imagens/grafico_price.png}$$
 		\end{frame}
 		
 	\section{Sistema de Amortização Misto (SAM)}
