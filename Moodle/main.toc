@@ -1,0 +1,8 @@
+\babel@toc {brazil}{}\relax 
+\beamer@sectionintoc {1}{Introdução}{3}{0}{1}
+\beamer@sectionintoc {2}{A origem do Moodle}{6}{0}{2}
+\beamer@sectionintoc {3}{O Moodle}{9}{0}{3}
+\beamer@sectionintoc {4}{As características do Moodle}{12}{0}{4}
+\beamer@sectionintoc {5}{As principais ferramentas e recursos}{16}{0}{5}
+\beamer@sectionintoc {6}{Em resumo}{20}{0}{6}
+\beamer@sectionintoc {7}{Referências}{24}{0}{7}
