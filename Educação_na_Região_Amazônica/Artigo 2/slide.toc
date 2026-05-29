@@ -3,4 +3,6 @@
 \beamer@sectionintoc {2}{Critica a colonialidade}{6}{0}{2}
 \beamer@sectionintoc {3}{Suberverção da narrativa histórica}{10}{0}{3}
 \beamer@sectionintoc {4}{Da crítica à insurgência}{13}{0}{4}
-\beamer@sectionintoc {5}{Referência}{21}{0}{5}
+\beamer@sectionintoc {5}{Perguntas para reflexão}{21}{0}{5}
+\beamer@sectionintoc {6}{Conclusão?}{24}{0}{6}
+\beamer@sectionintoc {7}{Referência}{25}{0}{7}
