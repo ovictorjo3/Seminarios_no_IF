@@ -150,17 +150,19 @@
 			
 		\end{frame}
 		
-	\section{Aplicações}
+	\section{Financiamento SAC}
+	
+	
 	
 		\begin{frame}{Financiamento SAC}
-			\begin{exampleblock}{Exemplo 1a.}
+			\begin{exampleblock}{Exemplo 1.}
 				\justifying
 				Pedro tomou um empréstimo de R\$ 10.000, a ser pago em 5 parcelas mensais, à taxa de juros de 10\% ao mês. Quais são os valores de cada parcela? Considere o Sistema SAC.
 			\end{exampleblock}
 		\end{frame}
 
 		
-		\begin{frame}{Financiamento SAC - Exemplo 1a.}
+		\begin{frame}{Financiamento SAC - Exemplo 1.}
 			\begin{table}[h]
 				\centering
 				\begin{tabular}{|c|c|c|c|c|c|}
@@ -185,13 +187,13 @@
 		\end{frame}
 		
 		\begin{frame}{Financiamento SAC}
-			\begin{exampleblock}{Exemplo 1b.}
+			\begin{exampleblock}{Exemplo 2.}
 				\justifying
 				Um financiamento de R\$ 60.000 deve ser devolvido de acordo com o SAC (Sistema de Amortização Constante) em 4 prestações anuais à uma taxa de juros de 6\% ao ano. Construa a planilha de pagamento dessa dívida.
 			\end{exampleblock}
 		\end{frame}
 		
-		\begin{frame}{Financiamento SAC - Exemplo 1b.}
+		\begin{frame}{Financiamento SAC - Exemplo 2.}
 			\begin{table}[h]
 				\centering
 				\begin{tabular}{|c|c|c|c|c|c|}
@@ -220,15 +222,55 @@
 			$$\includegraphics[scale=0.45]{imagens/grafico_sac.png}$$
 		\end{frame}
 		
+	\section{Financiamento Price}
+		
+		\begin{frame}{Financimento Price}
+			\justifying
+			Consideremos, como exemplo, um empréstimo de R\$ 10.000,00 a ser pago, sem carência, em 8 parcelas à base de 5\% a.m. de juros.
+			A parcela constante nesse caso pode ser obtida por meio da fórmula:
+			
+			\begin{columns}[T]
+				\column{.5\linewidth}
+				
+				\[
+				C = \dfrac{1}{a_{n \mid i}} \times M
+				\]
+				
+				\[
+				C = \dfrac{1}{a_{8 \mid 0,05}} \times 10.000
+				\]
+				
+				\[
+				C = \dfrac{1}{6,464} \times 10.000
+				\]
+				
+				\[
+				C = R\$ 1.547,02
+				\]
+				
+				\column{.5\linewidth}
+				\[
+				a_{n \mid i} = \dfrac{1-(1+0,05)^{-8}}{0,05}
+				\]
+				\[
+				a_{n \mid i} = \dfrac{0,3232}{0,05}
+				\]
+				\[
+				a_{n \mid i} = 6,464
+				\]
+			\end{columns}
+			
+		\end{frame}
+		
 		
 		\begin{frame}{Financiamento Price}
-			\begin{exampleblock}{Exemplo 2a.}
+			\begin{exampleblock}{Exemplo 1.}
 				\justifying
 				Pedro tomou um empréstimo de R\$ 10.000, a ser pago em 5 parcelas mensais, à taxa de juros de 10\% ao mês. Quais são os valores de cada parcela? Considere o Sistema Price.
 			\end{exampleblock}
 		\end{frame}	
 		
-		\begin{frame}{Financiamento Price - Exemplo 02.}
+		\begin{frame}{Financiamento Price - Exemplo 1.}
 		\begin{table}[h]
 			\centering
 			\begin{tabular}{|c|c|c|c|c|c|}
@@ -253,13 +295,13 @@
 		\end{frame}
 		
 		\begin{frame}{Financiamento Price}
-			\begin{exampleblock}{Exemplo 2b.}
+			\begin{exampleblock}{Exemplo 2.}
 				\justifying
 				Uma pessoa adquiriu uma televisão pela tabela price no valor de R\$ 1200,00, com pagamentos em 4 prestações mensais, a taxa de juros de 11\% ao mês.  Construa a planilha do pagamento dessa dívida.
 			\end{exampleblock}
 		\end{frame}	
 		
-		\begin{frame}{Financiamento Price - Exemplo 2b.}
+		\begin{frame}{Financiamento Price - Exemplo 1.}
 			\begin{table}[h]
 				\centering
 				\begin{tabular}{|c|c|c|c|c|c|}
