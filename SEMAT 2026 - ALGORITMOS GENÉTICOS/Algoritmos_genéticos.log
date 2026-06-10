@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.30)  5 MAY 2026 22:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.30)  10 JUN 2026 08:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1358,40 +1358,39 @@ LaTeX Font Info:    Font shape `OT1/LibertinusSans-TLF/m/n' will be
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
 st/fonts/enc/dvips/libertinus-type1/lbn1_jrenuz.enc} <./imagens/logo_final.png>
-] (./Algoritmos_genéticos.toc)
-LaTeX Font Info:    Font shape `OT1/LibertinusSans-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 192.
- [2
-
 ]
-LaTeX Font Info:    Trying to load font information for U+zeur on input line 23
-1.
+LaTeX Font Info:    Trying to load font information for U+zeur on input line 22
+7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeur.fd
 File: uzeur.fd 2005/01/11 v4.0 (WaS)
 )
-LaTeX Font Info:    Trying to load font information for U+zeus on input line 23
-1.
+LaTeX Font Info:    Trying to load font information for U+zeus on input line 22
+7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeus.fd
 File: uzeus.fd 2005/01/11 v4.0 (WaS)
 )
 LaTeX Font Info:    Trying to load font information for U+zeuex on input line 2
-31.
+27.
 
 (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeuex.fd
 File: uzeuex.fd 2005/01/11 v4.0 (WaS)
 )
 LaTeX Font Info:    Font shape `OT1/LibertinusSans-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 231.
- [3
+(Font)              scaled to size 10.0pt on input line 227.
+LaTeX Font Info:    Font shape `OT1/LibertinusSans-TLF/b/n' will be
+(Font)              scaled to size 14.4pt on input line 227.
+ [2
+
+] [3
 
 ] [4
 
-] [5
-
 ]
-[6
+[5
+
+] [6
 
 ] [7
 
@@ -1417,23 +1416,21 @@ LaTeX Font Info:    Font shape `OT1/LibertinusSans-TLF/b/n' will be
 
 ] [18
 
-] [19
-
 ]
 LaTeX Font Info:    Font shape `OT1/LibertinusSans-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 380.
- [20
+(Font)              scaled to size 7.0pt on input line 376.
+ [19
 
-] [21
+] [20
 
 ]
-[22
+[21
 
-] [23
+] [22
 
 ]
 LaTeX Font Info:    Trying to load font information for OT1+LibertinusMono-TLF 
-on input line 405.
+on input line 401.
 
 (/usr/share/texlive/texmf-dist/tex/latex/libertinus-type1/OT1LibertinusMono-TLF
 .fd
@@ -1441,11 +1438,13 @@ File: OT1LibertinusMono-TLF.fd 2025/01/11 (autoinst) Font definitions for OT1/L
 ibertinusMono-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LibertinusMono-TLF/m/n' will be
-(Font)              scaled to size 7.65005pt on input line 405.
- [24
+(Font)              scaled to size 7.65005pt on input line 401.
+ [23
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_wbnhrd.enc
-}] [25
+}] [24
+
+] [25
 
 ] [26
 
@@ -1463,19 +1462,19 @@ LaTeX Font Info:    Font shape `OT1/LibertinusMono-TLF/m/n' will be
 
 ] [33
 
-] [34
-
 ]
 LaTeX Font Info:    Font shape `OT1/LibertinusMono-TLF/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 516.
- [35
+(Font)              scaled to size 8.50006pt on input line 512.
+ [34
+
+] [35
 
 ] [36
 
-] [37
-
 ]
-[38
+[37
+
+] [38
 
 ] [39
 
@@ -1503,40 +1502,38 @@ LaTeX Font Info:    Font shape `OT1/LibertinusMono-TLF/m/n' will be
 
 ] [51
 
-] [52
-
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 657--657
+Underfull \hbox (badness 10000) in paragraph at lines 653--653
 []\OT1/LibertinusSans-TLF/m/n/10 Deve-se car-re-gar itens com o
  []
 
-<imagens/mochila.png, id=911, 509.905pt x 445.665pt>
+<imagens/mochila.png, id=903, 509.905pt x 445.665pt>
 File: imagens/mochila.png Graphic file (type png)
 <use imagens/mochila.png>
-Package pdftex.def Info: imagens/mochila.png  used on input line 657.
+Package pdftex.def Info: imagens/mochila.png  used on input line 653.
 (pdftex.def)             Requested size: 152.97267pt x 133.70053pt.
-[53
+[52
 
  <./imagens/mochila.png>]
 
 LaTeX Font Warning: Font shape `OT1/LibertinusSans-TLF/b/it' undefined
-(Font)              using `OT1/LibertinusSans-TLF/b/n' instead on input line 68
-1.
+(Font)              using `OT1/LibertinusSans-TLF/b/n' instead on input line 67
+7.
 
-[54
+[53
 
 ]
 LaTeX Font Info:    Font shape `OT1/LibertinusSans-TLF/b/it' will be
-(Font)              scaled to size 14.4pt on input line 708.
- [55
+(Font)              scaled to size 14.4pt on input line 704.
+ [54
 
-] [56
+] [55
 
 ]
 LaTeX Font Info:    Font shape `OT1/LibertinusSans-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 732.
+(Font)              scaled to size 10.0pt on input line 728.
 LaTeX Font Info:    Trying to load font information for TS1+LibertinusSans-TLF 
-on input line 732.
+on input line 728.
 
 (/usr/share/texlive/texmf-dist/tex/latex/libertinus-type1/TS1LibertinusSans-TLF
 .fd
@@ -1544,18 +1541,18 @@ File: TS1LibertinusSans-TLF.fd 2024/09/22 (autoinst) Font definitions for TS1/L
 ibertinusSans-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LibertinusSans-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 732.
- [57
+(Font)              scaled to size 10.0pt on input line 728.
+ [56
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_rlktsf.enc
 }]
 LaTeX Font Info:    Font shape `OT1/LibertinusSans-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 761.
+(Font)              scaled to size 7.0pt on input line 757.
 LaTeX Font Info:    Font shape `OT1/LibertinusSans-TLF/m/it' will be
-(Font)              scaled to size 5.0pt on input line 761.
- [58
+(Font)              scaled to size 5.0pt on input line 757.
+ [57
 
-] [59
+] [58
 
 ]
 \tf@nav=\write6
@@ -1580,10 +1577,10 @@ Package rerunfilecheck Info: File `Algoritmos_genéticos.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 44975 strings out of 469494
- 1053182 string characters out of 5469291
- 1546217 words of memory out of 5000000
- 72712 multiletter control sequences out of 15000+600000
+ 44966 strings out of 469494
+ 1052995 string characters out of 5469291
+ 1545217 words of memory out of 5000000
+ 72707 multiletter control sequences out of 15000+600000
  660947 words of font info for 113 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  101i,16n,107p,737b,724s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1602,10 +1599,10 @@ ts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/eule
 r/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msam10.pfb>
-Output written on Algoritmos_genéticos.pdf (59 pages, 679998 bytes).
+Output written on Algoritmos_genéticos.pdf (58 pages, 679442 bytes).
 PDF statistics:
- 1083 PDF objects out of 1200 (max. 8388607)
- 682 compressed objects within 7 object streams
- 119 named destinations out of 1000 (max. 500000)
+ 1075 PDF objects out of 1200 (max. 8388607)
+ 676 compressed objects within 7 object streams
+ 117 named destinations out of 1000 (max. 500000)
  1673 words of extra memory for PDF output out of 10000 (max. 10000000)
 
