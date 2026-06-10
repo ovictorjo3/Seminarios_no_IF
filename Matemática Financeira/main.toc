@@ -3,7 +3,7 @@
 \beamer@sectionintoc {2}{Principais Sistemas}{7}{0}{2}
 \beamer@sectionintoc {3}{Vantagens e Desvantagens}{8}{0}{3}
 \beamer@sectionintoc {4}{Financiamento SAC}{10}{0}{4}
-\beamer@sectionintoc {5}{Financiamento Price}{16}{0}{5}
-\beamer@sectionintoc {6}{Sistema de Amortização Misto (SAM)}{22}{0}{6}
-\beamer@sectionintoc {7}{Sistema Americano}{26}{0}{7}
-\beamer@sectionintoc {8}{Referências}{28}{0}{8}
+\beamer@sectionintoc {5}{Financiamento Price}{17}{0}{5}
+\beamer@sectionintoc {6}{Sistema de Amortização Misto (SAM)}{23}{0}{6}
+\beamer@sectionintoc {7}{Sistema Americano}{27}{0}{7}
+\beamer@sectionintoc {8}{Referências}{29}{0}{8}
