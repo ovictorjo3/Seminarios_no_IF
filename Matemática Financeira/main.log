@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.30)  9 JUN 2026 23:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.30)  9 JUN 2026 23:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1353,61 +1353,63 @@ dvips/cm-super/cm-super-t1.enc} <./imagens/logo_3.jpg>] (./main.toc) [2
 
 ] [13
 
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<imagens/grafico_sac.png, id=215, 697.60625pt x 335.2525pt>
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [14
+
+]
+<imagens/grafico_sac.png, id=231, 697.60625pt x 335.2525pt>
 File: imagens/grafico_sac.png Graphic file (type png)
 <use imagens/grafico_sac.png>
-Package pdftex.def Info: imagens/grafico_sac.png  used on input line 208.
+Package pdftex.def Info: imagens/grafico_sac.png  used on input line 214.
 (pdftex.def)             Requested size: 313.9199pt x 150.86223pt.
- [14
+ [15
 
- <./imagens/grafico_sac.png>] [15
-
-] [16
+ <./imagens/grafico_sac.png>] [16
 
 ]
 [17
 
+] [18
+
 ]
-Overfull \vbox (1.16121pt too high) detected at line 292
+Overfull \vbox (1.16121pt too high) detected at line 298
  []
 
-[18
+[19
 
 ]
-<imagens/grafico_price.png, id=280, 592.2125pt x 383.4325pt>
+<imagens/grafico_price.png, id=297, 592.2125pt x 383.4325pt>
 File: imagens/grafico_price.png Graphic file (type png)
 <use imagens/grafico_price.png>
-Package pdftex.def Info: imagens/grafico_price.png  used on input line 299.
+Package pdftex.def Info: imagens/grafico_price.png  used on input line 305.
 (pdftex.def)             Requested size: 266.49315pt x 172.54303pt.
- [19
+ [20
 
- <./imagens/grafico_price.png>] [20
+ <./imagens/grafico_price.png>] [21
 
-] [21
+] [22
 
 ]
-<imagens/sam.png, id=304, 464.73625pt x 364.36125pt>
+<imagens/sam.png, id=320, 464.73625pt x 364.36125pt>
 File: imagens/sam.png Graphic file (type png)
 <use imagens/sam.png>
-Package pdftex.def Info: imagens/sam.png  used on input line 323.
+Package pdftex.def Info: imagens/sam.png  used on input line 329.
 (pdftex.def)             Requested size: 209.12938pt x 163.96104pt.
- [22
+ [23
 
  <./imagens/sam.png>]
-[23
+[24
 
-] [24
+] [25
 
 ]
-<imagens/sa.png, id=326, 763.85374pt x 377.41pt>
+<imagens/sa.png, id=343, 763.85374pt x 377.41pt>
 File: imagens/sa.png Graphic file (type png)
 <use imagens/sa.png>
-Package pdftex.def Info: imagens/sa.png  used on input line 357.
+Package pdftex.def Info: imagens/sa.png  used on input line 363.
 (pdftex.def)             Requested size: 267.35281pt x 132.09547pt.
- [25
+ [26
 
- <./imagens/sa.png>] [26
+ <./imagens/sa.png>] [27
 
 ]
 \tf@nav=\write7
@@ -1440,10 +1442,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31252 strings out of 469494
- 609713 string characters out of 5469291
+ 31256 strings out of 469494
+ 609748 string characters out of 5469291
  1454405 words of memory out of 5000000
- 59262 multiletter control sequences out of 15000+600000
+ 59264 multiletter control sequences out of 15000+600000
  643307 words of font info for 78 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  128i,15n,123p,693b,4312s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1460,10 +1462,10 @@ s/type1/public/cm-super/sfss1095.pfb></usr/share/texmf/fonts/type1/public/cm-su
 per/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1440.pfb></u
 sr/share/texmf/fonts/type1/public/cm-super/sfss1728.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sfsx1200.pfb>
-Output written on main.pdf (26 pages, 352538 bytes).
+Output written on main.pdf (27 pages, 354946 bytes).
 PDF statistics:
- 425 PDF objects out of 1000 (max. 8388607)
- 284 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
- 360 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 441 PDF objects out of 1000 (max. 8388607)
+ 293 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 390 words of extra memory for PDF output out of 10000 (max. 10000000)
 
