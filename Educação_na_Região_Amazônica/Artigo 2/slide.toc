@@ -1,8 +1,8 @@
 \babel@toc {brazil}{}\relax 
 \beamer@sectionintoc {1}{Opção Decolonial}{3}{0}{1}
-\beamer@sectionintoc {2}{Critica a colonialidade}{7}{0}{2}
-\beamer@sectionintoc {3}{Suberverção da narrativa histórica}{11}{0}{3}
-\beamer@sectionintoc {4}{Da crítica à insurgência}{14}{0}{4}
-\beamer@sectionintoc {5}{Perguntas para reflexão}{22}{0}{5}
-\beamer@sectionintoc {6}{Conclusão?}{25}{0}{6}
-\beamer@sectionintoc {7}{Referência}{26}{0}{7}
+\beamer@sectionintoc {2}{Critica a colonialidade}{9}{0}{2}
+\beamer@sectionintoc {3}{Suberverção da narrativa histórica}{13}{0}{3}
+\beamer@sectionintoc {4}{Da crítica à insurgência}{16}{0}{4}
+\beamer@sectionintoc {5}{Perguntas para reflexão}{24}{0}{5}
+\beamer@sectionintoc {6}{Conclusão?}{27}{0}{6}
+\beamer@sectionintoc {7}{Referência}{28}{0}{7}
